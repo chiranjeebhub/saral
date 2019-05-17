@@ -1,0 +1,35 @@
+.logoCard {
+  width: 190px;
+  height: 70px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 5px 6px 0 rgba(11, 28, 6, 0.2);
+  box-shadow: 0px 5px 6px 0 rgba(11, 28, 6, 0.2);
+  background-color: #ffffff;
+}
+
+.Saral-Diagnostics-Logo {
+  width: 150px;
+  height: 42px;
+}
+
+.navMenu p {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: Helvetica;
+  font-weight: 700;
+  color: white;
+}
+
+.menu-separator {
+  font-size: 15px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.hero {
+  width: auto;
+  height: 100vh;
+  background-image: url("../img/homepage_bg.jpg");
+  z-index: -999;
+}
+/*# sourceMappingURL=index.css.map */

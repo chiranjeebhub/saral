@@ -1,0 +1,9 @@
+@import "./nav";
+
+.hero {
+  width: auto;
+  height: 100vh;
+  // opacity: 0.56;
+  background-image: url("../img/homepage_bg.jpg");
+  z-index: -999;
+}
