@@ -2,46 +2,11 @@ import React from "react";
 
 const Nav = () => {
   return (
-    // <div className="container">
-    //   <nav class="navbar navbar-light">
-    //     <div
-    //       class="card shadow "
-    //       style={{ marginTop: "-10px", border: "none" }}
-    //     >
-    //       <div class="card-body" style={{ padding: "1rem" }}>
-    //         <a class="navbar-brand" href="#">
-    //           <img
-    //             src={require("../img/logo.png")}
-    //             width="150"
-    //             height="42"
-    //             alt=""
-    //           />
-    //         </a>
-    //       </div>
-    //     </div>
-    //     <div className="navMenu">
-    //       <div
-    //         className="row"
-    //         style={{ fontSize: "13.5px", alignContent: "right" }}
-    //       >
-    //         <p>Login/Sign Up</p>
-    //         <p>Gurgaon</p>
-    //         <p>999-888-000-5</p>
-    //       </div>
-    //       <div
-    //         className="row"
-    //         style={{ marginTop: "-5px", fontSize: "17.5px" }}
-    //       >
-    //         <p>Health Deals</p> |<p>Labs</p> |<p>Blog</p> |<p>Contact Us</p>
-    //       </div>
-    //     </div>
-    //   </nav>
-    // </div>
     <nav class="navbar navbar-expand-lg navbar-light" style={{ zIndex: "9" }}>
       <div className="container">
         <div
           class="card shadow "
-          style={{ marginTop: "-10px", border: "none" }}
+          style={{ marginTop: "-12px", border: "none" }}
         >
           <div class="card-body" style={{ padding: "1rem" }}>
             <a class="navbar-brand" href="#">
@@ -85,9 +50,6 @@ const Nav = () => {
                 className="row"
                 style={{ fontSize: "13.5px", justifyContent: "flex-end" }}
               >
-                {/* <p>Login/Sign Up</p>
-                <p>Gurgaon</p>
-                <p>999-888-000-5</p> */}
                 <ul class="navbar-nav" style={{ justifyContent: "right" }}>
                   <li class="nav-item">
                     <a class="nav-link" href="#">
