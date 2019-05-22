@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/saral/static/css/main.08541765.chunk.css",
+    "main.js": "/saral/static/js/main.4711dc0b.chunk.js",
+    "main.js.map": "/saral/static/js/main.4711dc0b.chunk.js.map",
+    "runtime~main.js": "/saral/static/js/runtime~main.26e20269.js",
+    "runtime~main.js.map": "/saral/static/js/runtime~main.26e20269.js.map",
+    "static/js/2.18e56f69.chunk.js": "/saral/static/js/2.18e56f69.chunk.js",
+    "static/js/2.18e56f69.chunk.js.map": "/saral/static/js/2.18e56f69.chunk.js.map",
+    "index.html": "/saral/index.html",
+    "precache-manifest.39b40998452704db2710b4733dbc13e6.js": "/saral/precache-manifest.39b40998452704db2710b4733dbc13e6.js",
+    "service-worker.js": "/saral/service-worker.js",
+    "static/css/main.08541765.chunk.css.map": "/saral/static/css/main.08541765.chunk.css.map",
+    "static/media/index.css": "/saral/static/media/homepage_bg.27b19b2b.jpg",
+    "static/media/NABL_Delhi.jpg": "/saral/static/media/NABL_Delhi.f4be56dc.jpg",
+    "static/media/logo.png": "/saral/static/media/logo.f561acb1.png"
+  }
+}
