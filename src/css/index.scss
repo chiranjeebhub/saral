@@ -121,6 +121,36 @@
   //margin-top: -50px;
   //margin-top: -50px;
 }
+.pkg {
+  margin-top: 10px;
+  margin-right: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  font-size: 15px;
+  .pkg-title {
+    color: #33c9da;
+    font-size: 22px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+  .pkg-price {
+    color: #33c9da;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+  &:hover {
+    color: white;
+    background-color: #33c9da;
+    .pkg-title {
+      color: white;
+    }
+    .pkg-price {
+      color: white;
+    }
+  }
+}
 .Health-Risk {
   //width: 219px;
   height: 38px;

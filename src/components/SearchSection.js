@@ -15,21 +15,61 @@ const SearchSection = () => {
                     type="search"
                     class="form-control"
                     placeholder="Find your Package/Test"
+                    style={{ borderRadius: "5px 0px 0px 5px" }}
                   />
                 </div>
-                <div class="col" style={{ paddingLeft: "0px" }}>
-                  <button className="btn btn-primary">Search</button>
+                <div
+                  class="col"
+                  style={{
+                    paddingLeft: "0px"
+                  }}
+                >
+                  <button
+                    className="btn btn-primary"
+                    style={{ borderRadius: "0px 5px 5px 0px" }}
+                  >
+                    Search
+                  </button>
                 </div>
               </div>
-              {/* <input
-              name="moviename"
-              className="form-control mr-sm-2"
-              type="search, submit"
-              placeholder="Search"
-              aria-label="Search"
-              style={{ height: "40px" }}
-            /> */}
             </form>
+            <div className="pkg">
+              <span className="pkg-title">PREMARITAL</span>
+              <br />
+              <span>
+                <b>Include 16 lab tests</b>
+              </span>
+              <br />
+              Haemogram(Hb, TLC, DLC, ESR, RBC, PCV, Platelet, PeripheralSmer,
+              MCV, MCH, MCHC, MPV, RDW, ANC, AEC, ALC, AMC – 16 test)
+              <br />
+              <b>Blood Group</b> <br />
+              VDRL, HbSAg, HIV, HPLC <br />
+              <span className="pkg-price">₹2,000</span>
+            </div>
+            <div className="pkg">
+              <span className="pkg-title">PREMARITAL</span>
+              <br />
+              <span>
+                <b>Include 16 lab tests</b>
+              </span>
+              <br />
+              Haemogram(Hb, TLC, DLC, ESR, RBC, PCV, Platelet, PeripheralSmer,
+              MCV, MCH, MCHC, MPV, RDW, ANC, AEC, ALC, AMC – 16 test)
+              <br />
+              <b>Blood Group</b> <br />
+              VDRL, HbSAg, HIV, HPLC <br />
+              <span className="pkg-price">₹2,000</span>
+            </div>
+            <p
+              style={{
+                paddingLeft: "20px",
+                color: "#33c9da",
+                fontWeight: "bold"
+              }}
+            >
+              View All Packages >>
+            </p>
           </div>
         </div>
       </div>
