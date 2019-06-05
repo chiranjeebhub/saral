@@ -1,27 +1,17 @@
 import React from "react";
-
+import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 import "./css/index.css";
-import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-import CollectionCard from "./components/CollectionCard";
-import SearchSection from "./components/SearchSection";
-import HealthRisk from "./components/HealthRisk";
-import Accrediation from "./components/Accreditation";
-import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import SearchResult from "./pages/SearchResult";
 
 function App() {
   return (
-    <React.Fragment>
-      <div className="hero">
-        <Nav />
-        <Hero />
-      </div>
-      <CollectionCard />
-      <SearchSection />
-      <HealthRisk />
-      <Accrediation />
-      <Footer />
-    </React.Fragment>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/SearchResult" component={SearchResult} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 

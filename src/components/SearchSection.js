@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import { Redirect, Link } from "react-router-dom";
 
 const SearchSection = () => {
+  const [query, setQuery] = useState("");
+  const handleSubmit = e => {
+    e.preventDefault();
+    if (query === "") {
+      return <Redirect to="/SearchResult" />;
+    }
+  };
   return (
     <div className="hero-2">
       <div className="container">
@@ -8,7 +16,7 @@ const SearchSection = () => {
           <div class="col-sm-4" />
           <div class="col-sm-8" style={{ paddingTop: "60px" }}>
             <h1 className="Health-Checkup-Packages">Health Checkup Packages</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div class="row" style={{ paddingTop: "20px" }}>
                 <div class="col-8" style={{ paddingRight: "0px" }}>
                   <input
@@ -16,6 +24,8 @@ const SearchSection = () => {
                     class="form-control"
                     placeholder="Find your Package/Test"
                     style={{ borderRadius: "5px 0px 0px 5px" }}
+                    value={query}
+                    onChange={e => setQuery(e.target.value)}
                   />
                 </div>
                 <div
@@ -24,12 +34,14 @@ const SearchSection = () => {
                     paddingLeft: "0px"
                   }}
                 >
-                  <button
-                    className="btn btn-primary"
-                    style={{ borderRadius: "0px 5px 5px 0px" }}
-                  >
-                    Search
-                  </button>
+                  <Link to="/SearchResult">
+                    <button
+                      className="btn btn-primary"
+                      style={{ borderRadius: "0px 5px 5px 0px" }}
+                    >
+                      Search
+                    </button>
+                  </Link>
                 </div>
               </div>
             </form>

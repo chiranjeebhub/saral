@@ -39,7 +39,11 @@ const HealthRisk = () => {
             />
             <br />
             <br />
-            <h3>Heart</h3>
+            <p
+              style={{ fontSize: "21px", fontWeight: "bold", color: "#33c9da" }}
+            >
+              Heart
+            </p>
             <p style={{ fontSize: "12px" }}>
               Heart is the most important organ of the body and keeping it
               healthy is essential. With heart checkup, stay away from any heart
@@ -58,7 +62,11 @@ const HealthRisk = () => {
             />
             <br />
             <br />
-            <h3>Kidney</h3>
+            <p
+              style={{ fontSize: "21px", fontWeight: "bold", color: "#33c9da" }}
+            >
+              Kidney
+            </p>
             <p style={{ fontSize: "12px" }}>
               Heart is the most important organ of the body and keeping it
               healthy is essential. With heart checkup, stay away from any heart
@@ -76,7 +84,11 @@ const HealthRisk = () => {
             />
             <br />
             <br />
-            <h3>Liver</h3>
+            <p
+              style={{ fontSize: "21px", fontWeight: "bold", color: "#33c9da" }}
+            >
+              Liver
+            </p>
             <p style={{ fontSize: "12px" }}>
               Heart is the most important organ of the body and keeping it
               healthy is essential. With heart checkup, stay away from any heart
@@ -94,7 +106,11 @@ const HealthRisk = () => {
             />
             <br />
             <br />
-            <h3>Heart</h3>
+            <p
+              style={{ fontSize: "21px", fontWeight: "bold", color: "#33c9da" }}
+            >
+              Heart
+            </p>
             <p style={{ fontSize: "12px" }}>
               Heart is the most important organ of the body and keeping it
               healthy is essential. With heart checkup, stay away from any heart
@@ -110,61 +126,83 @@ const HealthRisk = () => {
         >
           Habits
         </h1>
-        <div style={{ display: "flex", margin: "auto" }}>
+        <div
+          style={{ display: "flex", alignSelf: "center", alignItems: "center" }}
+        >
           <div className="habit-card">
-            <span style={{ display: "flex" }}>
-              <img
-                src={require("../img/Alcoholism.jpg")}
-                height="48"
-                width="48"
-                alt=""
-              />
-              <p style={{ fontSize: "21px" }}>Smoking</p>
-            </span>
+            <div className="row" style={{ textAlign: "center" }}>
+              <div className="col-2" style={{ verticalAlign: "middle" }}>
+                <img
+                  src={require("../img/anger.jpg")}
+                  height="48"
+                  width="48"
+                  alt=""
+                />
+              </div>
+              <div className="col-10" style={{ alignSelf: "center" }}>
+                <span style={{ fontSize: "21px" }}>Anger</span>
+              </div>
+            </div>
           </div>
           <div className="habit-card">
-            <span style={{ display: "flex" }}>
-              <img
-                src={require("../img/Alcoholism.jpg")}
-                height="48"
-                width="48"
-                alt=""
-              />
-              <p style={{ fontSize: "21px" }}>Alcoholism</p>
-            </span>
+            <div className="row" style={{ textAlign: "center" }}>
+              <div className="col-2" style={{ verticalAlign: "middle" }}>
+                <img
+                  src={require("../img/Alcoholism.jpg")}
+                  height="48"
+                  width="48"
+                  alt=""
+                />
+              </div>
+              <div className="col-10" style={{ alignSelf: "center" }}>
+                <span style={{ fontSize: "21px" }}>Alcoholism</span>
+              </div>
+            </div>
           </div>
           <div className="habit-card">
-            <span style={{ display: "flex" }}>
-              <img
-                src={require("../img/Alcoholism.jpg")}
-                height="48"
-                width="48"
-                alt=""
-              />
-              <p style={{ fontSize: "21px" }}>Junk Food</p>
-            </span>
+            <div className="row" style={{ textAlign: "center" }}>
+              <div className="col-2" style={{ verticalAlign: "middle" }}>
+                <img
+                  src={require("../img/anger.jpg")}
+                  height="48"
+                  width="48"
+                  alt=""
+                />
+              </div>
+              <div className="col-10" style={{ alignSelf: "center" }}>
+                <span style={{ fontSize: "21px" }}>Anger</span>
+              </div>
+            </div>
           </div>
           <div className="habit-card">
-            <span style={{ display: "flex" }}>
-              <img
-                src={require("../img/Alcoholism.jpg")}
-                height="48"
-                width="48"
-                alt=""
-              />
-              <p style={{ fontSize: "21px" }}>Obesity</p>
-            </span>
+            <div className="row" style={{ textAlign: "center" }}>
+              <div className="col-2" style={{ verticalAlign: "middle" }}>
+                <img
+                  src={require("../img/anger.jpg")}
+                  height="48"
+                  width="48"
+                  alt=""
+                />
+              </div>
+              <div className="col-10" style={{ alignSelf: "center" }}>
+                <span style={{ fontSize: "21px" }}>Anger</span>
+              </div>
+            </div>
           </div>
           <div className="habit-card">
-            <span style={{ display: "flex", textAlign: "center" }}>
-              <img
-                src={require("../img/Alcoholism.jpg")}
-                height="48"
-                width="48"
-                alt=""
-              />
-              <p style={{ fontSize: "21px" }}>Anger</p>
-            </span>
+            <div className="row" style={{ textAlign: "center" }}>
+              <div className="col-2" style={{ verticalAlign: "middle" }}>
+                <img
+                  src={require("../img/anger.jpg")}
+                  height="48"
+                  width="48"
+                  alt=""
+                />
+              </div>
+              <div className="col-10" style={{ alignSelf: "center" }}>
+                <span style={{ fontSize: "21px" }}>Anger</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

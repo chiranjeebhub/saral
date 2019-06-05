@@ -1,4 +1,5 @@
 @import "./nav";
+@import "./search_res";
 
 .hero {
   // width: auto;
@@ -54,6 +55,16 @@
   position: relative;
   z-index: 2;
   //color: #299ca8;
+  .collection-mob-card {
+    border-radius: 9px;
+    box-shadow: 0px 3px 8.8px 0.2px rgba(0, 0, 0, 0.28);
+    background-color: #ffffff;
+  }
+  @media only screen and (max-width: 500px) {
+    .collection {
+      visibility: hidden;
+    }
+  }
 
   .collection-col {
     text-align: center;
@@ -179,9 +190,18 @@
   width: 202px;
   height: 329px;
 }
+.risk-card-mob {
+  border-radius: 5px;
+  box-shadow: -0.5px 0.9px 6.9px 0.1px rgba(0, 0, 0, 0.09);
+  border: solid 1px #ffffff;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
 
 .slick-slide {
-  padding: 0 50px;
+  padding: 0 20px;
   img {
     display: inline;
   }
@@ -192,6 +212,7 @@
 .slick-prev:before,
 .slick-next:before {
   color: black;
+  margin: 0px -80px;
 }
 .habit-card {
   width: 200px;
