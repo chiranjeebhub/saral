@@ -7,7 +7,7 @@ const SearchSectionMobile = () => {
       <h6 style={{ color: "#33c9da", textAlign: "center", padding: "10px" }}>
         Health Checkup Packages
       </h6>
-      <div class="row" style={{ paddingLeft: "5px" }}>
+      <div class="row" style={{ paddingLeft: "5px", margin: "0px" }}>
         <div class="col-10" style={{ paddingRight: "0px" }}>
           <input
             type="search"
