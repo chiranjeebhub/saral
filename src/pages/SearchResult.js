@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "../components/Nav";
+import SearchResultItem from "../components/SearchResultItem";
 
 const SearchResult = () => {
   return (
@@ -7,8 +8,8 @@ const SearchResult = () => {
       <div style={{ backgroundColor: "#33c9da" }}>
         <Nav />
       </div>
-      <div className="container">
-        <h1
+      <div className="container" style={{ marginTop: "30px" }}>
+        {/* <h1
           style={{
             textAlign: "center",
             paddingTop: "20px",
@@ -18,15 +19,8 @@ const SearchResult = () => {
           }}
         >
           Facilities Available
-        </h1>
-        <form
-          class="form-inline searchbar"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center"
-          }}
-        >
+        </h1> */}
+        <form class="form-inline">
           <div class="form-group">
             <input
               type="search"
@@ -34,7 +28,7 @@ const SearchResult = () => {
               id="search"
               placeholder="Find your Package/Test"
               style={{ borderRadius: "5px 0px 0px 5px" }}
-              width="100%"
+              size="80"
             />
           </div>
           <button
@@ -44,6 +38,7 @@ const SearchResult = () => {
           >
             <i class="fas fa-search" />
           </button>
+          &nbsp;&nbsp;&nbsp;
           <div class="form-group">
             <select class="form-control" id="exampleFormControlSelect1">
               <option>Risk Area</option>
@@ -53,6 +48,7 @@ const SearchResult = () => {
               <option>5</option>
             </select>
           </div>
+          &nbsp;&nbsp;&nbsp;
           <div class="form-group">
             <select class="form-control" id="exampleFormControlSelect1">
               <option>Habit</option>
@@ -63,25 +59,28 @@ const SearchResult = () => {
             </select>
           </div>
         </form>
-        <h1
+        <h2
           style={{
-            textAlign: "center",
             paddingTop: "20px",
             fontFamily: "Helvetica",
-            color: "#33c9da",
+            color: "#838383",
             fontWeight: "bold"
           }}
         >
-          MRI
-        </h1>
-        <p style={{ padding: "0px 100px", textAlign: "center" }}>
-          Our MRI is a brand new 24 channel MRI System. Why do we talk about
-          Elements & channels? Elements are what acquire the information.
-          Channels are like high ways on which information runs. Computers
-          compute the information and give you images. We have one of the
-          highest element density and number of channels for any region of
-          interest to give you unpar- alleled image quality.{" "}
-        </p>
+          Search Results
+        </h2>
+        <div style={{ backgroundColor: "#f3f2f2", padding: "40px" }}>
+          <div class="row">
+            <SearchResultItem />
+            <SearchResultItem />
+            <SearchResultItem />
+          </div>
+          <div class="row">
+            <SearchResultItem />
+            <SearchResultItem />
+            <SearchResultItem />
+          </div>
+        </div>
       </div>
     </React.Fragment>
   );

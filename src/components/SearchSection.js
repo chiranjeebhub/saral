@@ -46,18 +46,23 @@ const SearchSection = () => {
               </div>
             </form>
             <div className="pkg">
-              <span className="pkg-title">PREMARITAL</span>
-              <br />
-              <span>
-                <b>Include 16 lab tests</b>
-              </span>
-              <br />
-              Haemogram(Hb, TLC, DLC, ESR, RBC, PCV, Platelet, PeripheralSmer,
-              MCV, MCH, MCHC, MPV, RDW, ANC, AEC, ALC, AMC – 16 test)
-              <br />
-              <b>Blood Group</b> <br />
-              VDRL, HbSAg, HIV, HPLC <br />
-              <span className="pkg-price">₹2,000</span>
+              <Link
+                to="/single"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <span className="pkg-title">PREMARITAL</span>
+                <br />
+                <span>
+                  <b>Include 16 lab tests</b>
+                </span>
+                <br />
+                Haemogram(Hb, TLC, DLC, ESR, RBC, PCV, Platelet, PeripheralSmer,
+                MCV, MCH, MCHC, MPV, RDW, ANC, AEC, ALC, AMC – 16 test)
+                <br />
+                <b>Blood Group</b> <br />
+                VDRL, HbSAg, HIV, HPLC <br />
+                <span className="pkg-price">₹2,000</span>
+              </Link>
             </div>
             <div className="pkg">
               <span className="pkg-title">PREMARITAL</span>

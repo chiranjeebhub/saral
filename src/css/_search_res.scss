@@ -5,3 +5,44 @@
   border: solid 1px #ffffff;
   background-color: #ffffff;
 }
+.result-box {
+  padding: 20px;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: -2px 3.5px 18.3px 2.7px rgba(0, 0, 0, 0.08);
+  border: solid 1px #33c9da;
+  background-color: #ffffff;
+  .res-title {
+    color: #22abbb;
+    font-weight: bold;
+  }
+  .but-res {
+    color: white;
+    font-weight: bold;
+    background-color: #f9aa00;
+  }
+  .but-res-outline {
+    border-style: solid;
+    border-color: #f9aa00;
+    color: black;
+    font-weight: bold;
+  }
+  &:hover {
+    background-color: #33c9da;
+    .res-title {
+      color: white;
+      font-weight: bold;
+    }
+    .but-res {
+      color: #33c9da;
+      font-weight: bold;
+      background-color: white;
+    }
+    .but-res-outline {
+      border-style: solid;
+      border-color: white;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}

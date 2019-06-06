@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
@@ -9,14 +10,14 @@ const Nav = () => {
           style={{ marginTop: "-12px", border: "none" }}
         >
           <div class="card-body" style={{ padding: "1rem" }}>
-            <a class="navbar-brand" href="#">
+            <Link to="/" class="navbar-brand">
               <img
                 src={require("../img/logo.png")}
                 width="150"
                 height="42"
                 alt=""
               />
-            </a>
+            </Link>
           </div>
         </div>
         <button
