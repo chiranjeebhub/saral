@@ -97,7 +97,7 @@ const Nav = () => {
                   </li>
                   <li class="nav-item">
                     <Link to="/gallery" class="nav-link">
-                      Gallery<span className="menu-separator" />
+                      Gallery
                     </Link>
                   </li>
                 </ul>
