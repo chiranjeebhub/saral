@@ -76,24 +76,29 @@ const Nav = () => {
                 {/* <p>Health Deals</p> |<p>Labs</p> |<p>Blog</p> |<p>Contact Us</p> */}
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      Health Deals<span className="menu-separator">|</span>
-                    </a>
+                    <Link to="/about" class="nav-link">
+                      About<span className="menu-separator">|</span>
+                    </Link>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      Labs<span className="menu-separator">|</span>
-                    </a>
+                    <Link to="/experts" class="nav-link">
+                      Our Experts<span className="menu-separator">|</span>
+                    </Link>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      Blogs<span className="menu-separator">|</span>
-                    </a>
+                    <Link to="/centers" class="nav-link">
+                      Our Centers<span className="menu-separator">|</span>
+                    </Link>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      Contact Us
-                    </a>
+                    <Link to="/career" class="nav-link">
+                      Career<span className="menu-separator">|</span>
+                    </Link>
+                  </li>
+                  <li class="nav-item">
+                    <Link to="/gallery" class="nav-link">
+                      Gallery<span className="menu-separator" />
+                    </Link>
                   </li>
                 </ul>
               </div>

@@ -141,6 +141,64 @@
           box-shadow: 0px 5px 5px grey;
 }
 
+.about-box {
+  border-radius: 5px;
+  -webkit-box-shadow: -2.5px 4.3px 19.5px 1.5px rgba(21, 21, 21, 0.11);
+          box-shadow: -2.5px 4.3px 19.5px 1.5px rgba(21, 21, 21, 0.11);
+  border: solid 1px #ffffff;
+  background-color: #ffffff;
+  padding: 30px;
+  font-size: 15px;
+}
+
+.about-box1 {
+  border-radius: 5px;
+  -webkit-box-shadow: -2.5px 4.3px 19.5px 1.5px rgba(21, 21, 21, 0.11);
+          box-shadow: -2.5px 4.3px 19.5px 1.5px rgba(21, 21, 21, 0.11);
+  border: solid 1px #ffffff;
+  background-color: #ffffff;
+  font-size: 15px;
+}
+
+.ravi {
+  width: 100%;
+  height: 90%;
+  -webkit-box-shadow: -3.5px 6.1px 8.4px 0.6px rgba(21, 21, 21, 0.18);
+          box-shadow: -3.5px 6.1px 8.4px 0.6px rgba(21, 21, 21, 0.18);
+  border: solid 3px #33c9da;
+}
+
+.career-box {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 7px 0 rgba(21, 21, 21, 0.24);
+          box-shadow: 0 0 7px 0 rgba(21, 21, 21, 0.24);
+  background-color: #fbfbfb;
+}
+
+.read-more {
+  height: 74px;
+  border-radius: 5px;
+  background-color: #f4f3f3;
+  padding: 20px 20px;
+  color: #33c9da;
+}
+
+.gallery-section {
+  border-radius: 5px;
+  -webkit-box-shadow: -0.5px 0.9px 10px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: -0.5px 0.9px 10px 0 rgba(0, 0, 0, 0.19);
+  border: solid 1px #ffffff;
+  background-color: #f6f5f5;
+  padding: 40px;
+}
+
+.non-active {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 9px 0 rgba(21, 21, 21, 0.24);
+          box-shadow: 0 0 9px 0 rgba(21, 21, 21, 0.24);
+  background-color: #ffffff;
+}
+
 .hero {
   width: 100%;
   height: 100vh;

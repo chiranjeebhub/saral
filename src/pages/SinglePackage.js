@@ -76,6 +76,7 @@ const SinglePackage = () => {
               <div className="similar-title">Premarital Package</div>
             </div>
           </div>
+
           <div class="row" style={{ marginTop: "20px" }}>
             <div class="col">
               <img src={require("../img/placeholder.jpg")} alt="" />
