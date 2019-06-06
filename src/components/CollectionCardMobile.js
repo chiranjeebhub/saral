@@ -7,7 +7,7 @@ const CollectionCardMobile = () => {
         Book Home Collection
       </h6>
       <div style={{ backgroundColor: "#eeeded", padding: "5px" }}>
-        <div class="row" style={{ padding: "10px" }}>
+        <div class="row" style={{ padding: "5px", margin: "0px" }}>
           <div
             class="col card"
             style={{
@@ -57,7 +57,7 @@ const CollectionCardMobile = () => {
             </div>
           </div>
         </div>
-        <div class="row" style={{ padding: "10px" }}>
+        <div class="row" style={{ padding: "5px", margin: "0px" }}>
           <div class="col card" style={{ margin: "0px 6px", padding: "5px" }}>
             <div
               className="row"

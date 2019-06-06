@@ -9,7 +9,7 @@ const HealthRiskMobile = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerPadding: 0,
-    dots: true
+    arrows: false
   };
   return (
     <div>
