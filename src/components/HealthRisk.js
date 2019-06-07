@@ -116,7 +116,7 @@ const HealthRisk = () => {
             <p
               style={{ fontSize: "21px", fontWeight: "bold", color: "#33c9da" }}
             >
-              Heart
+              Anaemia
             </p>
             <p style={{ fontSize: "12px" }}>
               Heart is the most important organ of the body and keeping it
@@ -140,16 +140,31 @@ const HealthRisk = () => {
         >
           <div className="habit-card">
             <div className="row" style={{ textAlign: "center" }}>
-              <div className="col-2" style={{ verticalAlign: "middle" }}>
+              <div className="col-3" style={{ verticalAlign: "middle" }}>
                 <img
-                  src={require("../img/anger.jpg")}
+                  src={require("../img/Alcoholism.jpg")}
                   height="48"
                   width="48"
                   alt=""
                 />
               </div>
-              <div className="col-10" style={{ alignSelf: "center" }}>
-                <span style={{ fontSize: "21px" }}>Anger</span>
+              <div className="col-9" style={{ alignSelf: "center" }}>
+                <span style={{ fontSize: "21px" }}>Smoking</span>
+              </div>
+            </div>
+          </div>
+          <div className="habit-card">
+            <div className="row" style={{ textAlign: "center" }}>
+              <div className="col-3" style={{ verticalAlign: "middle" }}>
+                <img
+                  src={require("../img/Alcoholism.jpg")}
+                  height="48"
+                  width="48"
+                  alt=""
+                />
+              </div>
+              <div className="col-9" style={{ alignSelf: "center" }}>
+                <span style={{ fontSize: "21px" }}>Junk Food</span>
               </div>
             </div>
           </div>
@@ -164,7 +179,7 @@ const HealthRisk = () => {
                 />
               </div>
               <div className="col-10" style={{ alignSelf: "center" }}>
-                <span style={{ fontSize: "21px" }}>Alcoholism</span>
+                <span style={{ fontSize: "21px" }}>Obesity</span>
               </div>
             </div>
           </div>
@@ -172,14 +187,16 @@ const HealthRisk = () => {
             <div className="row" style={{ textAlign: "center" }}>
               <div className="col-2" style={{ verticalAlign: "middle" }}>
                 <img
-                  src={require("../img/anger.jpg")}
+                  src={require("../img/Alcoholism.jpg")}
                   height="48"
                   width="48"
                   alt=""
                 />
               </div>
               <div className="col-10" style={{ alignSelf: "center" }}>
-                <span style={{ fontSize: "21px" }}>Anger</span>
+                <span style={{ fontSize: "21px", float: "right" }}>
+                  Alcoholism
+                </span>
               </div>
             </div>
           </div>
@@ -187,29 +204,16 @@ const HealthRisk = () => {
             <div className="row" style={{ textAlign: "center" }}>
               <div className="col-2" style={{ verticalAlign: "middle" }}>
                 <img
-                  src={require("../img/anger.jpg")}
+                  src={require("../img/Alcoholism.jpg")}
                   height="48"
                   width="48"
                   alt=""
                 />
               </div>
               <div className="col-10" style={{ alignSelf: "center" }}>
-                <span style={{ fontSize: "21px" }}>Anger</span>
-              </div>
-            </div>
-          </div>
-          <div className="habit-card">
-            <div className="row" style={{ textAlign: "center" }}>
-              <div className="col-2" style={{ verticalAlign: "middle" }}>
-                <img
-                  src={require("../img/anger.jpg")}
-                  height="48"
-                  width="48"
-                  alt=""
-                />
-              </div>
-              <div className="col-10" style={{ alignSelf: "center" }}>
-                <span style={{ fontSize: "21px" }}>Anger</span>
+                <span style={{ fontSize: "18px", float: "right" }}>
+                  Sleeplessness
+                </span>
               </div>
             </div>
           </div>

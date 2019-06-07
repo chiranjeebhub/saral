@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "../components/Nav";
 import GallerySection from "../components/GallerySection";
 import Background from "../img/our_centre_bg.jpg";
+import Footer from "../components/Footer";
 
 const Centers = () => {
   return (
@@ -303,6 +304,7 @@ const Centers = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

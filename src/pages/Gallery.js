@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "../components/Nav";
 import Background from "../img/gallery_bg.jpg";
 import GallerySection from "../components/GallerySection";
+import Footer from "../components/Footer";
 
 const Gallery = () => {
   return (
@@ -115,6 +116,7 @@ const Gallery = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

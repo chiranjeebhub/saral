@@ -1,6 +1,8 @@
 import React from "react";
 import Nav from "../components/Nav";
 import Background from "../img/about_us.jpg";
+import pro from "../img/placeholder.jpg";
+import Footer from "../components/Footer";
 
 const About = () => {
   return (
@@ -183,7 +185,187 @@ const About = () => {
         >
           Our Process
         </h3>
+        <div
+          className="process"
+          style={{ padding: "20px", marginBottom: "20px" }}
+        >
+          <div className="row">
+            <div className="col">
+              <div class="card bg-dark text-white">
+                <img
+                  class="card-img"
+                  src={require("../img/placeholder.jpg")}
+                  alt=""
+                />
+                <div
+                  class="card-img-overlay"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    textAlign: "center",
+                    justifyContent: "center"
+                  }}
+                >
+                  <p class="card-text">
+                    1st NABL, NABH - MIS and ISO accredited Diagnostic centre of
+                    India.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div class="card bg-dark text-white">
+                <img
+                  class="card-img"
+                  src={require("../img/placeholder.jpg")}
+                  alt=""
+                />
+                <div
+                  class="card-img-overlay"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    textAlign: "center",
+                    justifyContent: "center"
+                  }}
+                >
+                  <p class="card-text">Sample Deposited at Nearest Saral Lab</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col">
+              <div class="card bg-dark text-white">
+                <img
+                  class="card-img"
+                  src={require("../img/placeholder.jpg")}
+                  alt=""
+                />
+                <div
+                  class="card-img-overlay"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center"
+                  }}
+                >
+                  <p class="card-text">Customised Packages</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col">
+              <div class="card bg-dark text-white">
+                <img
+                  class="card-img"
+                  src={require("../img/placeholder.jpg")}
+                  alt=""
+                />
+                <div
+                  class="card-img-overlay"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    textAlign: "center",
+                    justifyContent: "center"
+                  }}
+                >
+                  <p class="card-text">
+                    Tightly-controlled Labs for Superior Quality
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row" style={{ marginTop: "20px" }}>
+            <div className="col">
+              <div class="card bg-dark text-white">
+                <img
+                  class="card-img"
+                  src={require("../img/placeholder.jpg")}
+                  alt=""
+                />
+                <div
+                  class="card-img-overlay"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    textAlign: "center",
+                    justifyContent: "center"
+                  }}
+                >
+                  <p class="card-text">Smart E-reports</p>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div class="card bg-dark text-white">
+                <img
+                  class="card-img"
+                  src={require("../img/placeholder.jpg")}
+                  alt=""
+                />
+                <div
+                  class="card-img-overlay"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    textAlign: "center",
+                    justifyContent: "center"
+                  }}
+                >
+                  <p class="card-text">Hygienic Collection at your Door Step</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col">
+              <div class="card bg-dark text-white">
+                <img
+                  class="card-img"
+                  src={require("../img/placeholder.jpg")}
+                  alt=""
+                />
+                <div
+                  class="card-img-overlay"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    textAlign: "center",
+                    justifyContent: "center"
+                  }}
+                >
+                  <p class="card-text">
+                    Periodic Reminders for Tests & Lifestyle Changes
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col">
+              <div class="card bg-dark text-white">
+                <img
+                  class="card-img"
+                  src={require("../img/placeholder.jpg")}
+                  alt=""
+                />
+                <div
+                  class="card-img-overlay"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    textAlign: "center",
+                    justifyContent: "center"
+                  }}
+                >
+                  <p class="card-text">Task Assigned to Trained Phlebotomist</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };

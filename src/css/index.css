@@ -127,6 +127,7 @@
           box-shadow: -0.5px 0.9px 10px 0 rgba(0, 0, 0, 0.19);
   border: solid 1px #ffffff;
   background-color: #f6f5f5;
+  margin-bottom: 20px;
 }
 
 .similar-title {
@@ -168,6 +169,15 @@
   border: solid 3px #33c9da;
 }
 
+.process {
+  border-radius: 5px;
+  -webkit-box-shadow: -0.5px 0.9px 10px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: -0.5px 0.9px 10px 0 rgba(0, 0, 0, 0.19);
+  border: solid 1px #ffffff;
+  background-color: #f6f5f5;
+  padding: "20px";
+}
+
 .career-box {
   border-radius: 5px;
   -webkit-box-shadow: 0 0 7px 0 rgba(21, 21, 21, 0.24);
@@ -190,6 +200,7 @@
   border: solid 1px #ffffff;
   background-color: #f6f5f5;
   padding: 40px;
+  margin-bottom: 20px;
 }
 
 .non-active {
@@ -205,7 +216,7 @@
           box-shadow: 0 0 13px 0 rgba(21, 21, 21, 0.19);
   background-color: #ffffff;
   padding: 20px;
-  margin-top: 20px;
+  margin: 20px 0px;
 }
 
 .delhi-noida {
@@ -229,6 +240,27 @@
   border-radius: 2px;
   background-color: #fafafa;
   padding: "10px";
+  -webkit-box-shadow: inset 0 0 5px #000000;
+          box-shadow: inset 0 0 5px #000000;
+}
+
+.expert-box {
+  border-radius: 5px;
+  background-color: #ebebeb;
+  margin: 20px 0px;
+  padding: 20px;
+}
+
+.person-box {
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.img-shadow {
+  -webkit-box-shadow: 0 0 27px 0 rgba(21, 21, 21, 0.08);
+          box-shadow: 0 0 27px 0 rgba(21, 21, 21, 0.08);
+  padding: 5px;
 }
 
 .hero {

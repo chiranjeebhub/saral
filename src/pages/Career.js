@@ -2,6 +2,8 @@ import React from "react";
 import Nav from "../components/Nav";
 import Background from "../img/career_bg.jpg";
 import CareerBox from "../components/CareerBox";
+import Footer from "../components/Footer";
+
 const Career = () => {
   return (
     <div>
@@ -38,6 +40,7 @@ const Career = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

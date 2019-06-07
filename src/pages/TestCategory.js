@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "../components/Nav";
 import SearchResultItem from "../components/SearchResultItem";
+import Footer from "../components/Footer";
 
 const TestCategory = () => {
   return (
@@ -77,7 +78,13 @@ const TestCategory = () => {
           highest element density and number of channels for any region of
           interest to give you unpar- alleled image quality.{" "}
         </p>
-        <div style={{ backgroundColor: "#f3f2f2", padding: "40px" }}>
+        <div
+          style={{
+            backgroundColor: "#f3f2f2",
+            padding: "40px",
+            marginBottom: "20px"
+          }}
+        >
           <div class="row">
             <SearchResultItem />
             <SearchResultItem />
@@ -90,6 +97,7 @@ const TestCategory = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

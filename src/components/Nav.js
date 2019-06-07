@@ -80,11 +80,11 @@ const Nav = () => {
                       About<span className="menu-separator">|</span>
                     </Link>
                   </li>
-                  {/* <li class="nav-item">
+                  <li class="nav-item">
                     <Link to="/experts" class="nav-link">
                       Our Experts<span className="menu-separator">|</span>
                     </Link>
-                  </li> */}
+                  </li>
                   <li class="nav-item">
                     <Link to="/centers" class="nav-link">
                       Our Centers<span className="menu-separator">|</span>

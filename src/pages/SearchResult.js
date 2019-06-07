@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "../components/Nav";
 import SearchResultItem from "../components/SearchResultItem";
+import Footer from "../components/Footer";
 
 const SearchResult = () => {
   return (
@@ -58,7 +59,13 @@ const SearchResult = () => {
         >
           Search Results
         </h2>
-        <div style={{ backgroundColor: "#f3f2f2", padding: "40px" }}>
+        <div
+          style={{
+            backgroundColor: "#f3f2f2",
+            padding: "40px",
+            marginBottom: "20px"
+          }}
+        >
           <div class="row">
             <SearchResultItem />
             <SearchResultItem />
@@ -71,6 +78,7 @@ const SearchResult = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </React.Fragment>
   );
 };

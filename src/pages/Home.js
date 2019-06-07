@@ -54,7 +54,7 @@ const Home = () => {
 
         <HealthRisk />
         <Accr />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     );
   }
