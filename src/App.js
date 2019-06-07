@@ -11,6 +11,7 @@ import Centers from "./pages/Centers";
 import Gallery from "./pages/Gallery";
 import Experts from "./pages/Experts";
 import TestCategory from "./pages/TestCategory";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/centers" component={Centers} />
         <Route path="/experts" component={Experts} />
         <Route path="/gallery" component={Gallery} />
+        <Route path="/contact" component={Contact} />
         <Route path="/category" component={TestCategory} />
         <Route path="/single" component={SinglePackage} />
       </Switch>
