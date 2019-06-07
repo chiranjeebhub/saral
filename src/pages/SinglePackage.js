@@ -50,7 +50,7 @@ const SinglePackage = () => {
           </button>
           &nbsp;&nbsp;&nbsp;
           <button type="button" class="btn but-single-call">
-            Book Now
+            Get Call Back
           </button>
         </div>
         <h1
