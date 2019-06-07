@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 const HealthRisk = () => {
   const settings = {
@@ -50,7 +51,9 @@ const HealthRisk = () => {
               disease.
             </p>
             <br />
-            <p>View Test >></p>
+            <p>
+              <Link to="/category">View Test >></Link>
+            </p>
           </div>
 
           <div className="risk-card">
@@ -73,7 +76,9 @@ const HealthRisk = () => {
               disease.
             </p>
             <br />
-            <p>View Test >></p>
+            <p>
+              <Link to="/category">View Test >></Link>
+            </p>
           </div>
           <div className="risk-card">
             <img
@@ -95,7 +100,9 @@ const HealthRisk = () => {
               disease.
             </p>
             <br />
-            <p>View Test >></p>
+            <p>
+              <Link to="/category">View Test >></Link>
+            </p>
           </div>
           <div className="risk-card">
             <img
@@ -117,7 +124,9 @@ const HealthRisk = () => {
               disease.
             </p>
             <br />
-            <p>View Test >></p>
+            <p>
+              <Link to="/category">View Test >></Link>
+            </p>
           </div>
         </Slider>
         <h1

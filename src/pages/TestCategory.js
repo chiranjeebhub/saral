@@ -2,14 +2,24 @@ import React from "react";
 import Nav from "../components/Nav";
 import SearchResultItem from "../components/SearchResultItem";
 
-const SearchResult = () => {
+const TestCategory = () => {
   return (
-    <React.Fragment>
+    <div>
       <div style={{ backgroundColor: "#33c9da" }}>
         <Nav />
       </div>
       <div className="container" style={{ marginTop: "30px" }}>
-        <form class="form-inline">
+        <h2
+          style={{
+            fontFamily: "Helvetica",
+            color: "#33c9da",
+            fontWeight: "bold",
+            textAlign: "center"
+          }}
+        >
+          Facilities Available
+        </h2>
+        <form class="form-inline" style={{ justifyContent: "center" }}>
           <div class="form-group">
             <input
               type="search"
@@ -52,12 +62,21 @@ const SearchResult = () => {
           style={{
             paddingTop: "20px",
             fontFamily: "Helvetica",
-            color: "#838383",
-            fontWeight: "bold"
+            color: "#33c9da",
+            fontWeight: "bold",
+            textAlign: "center"
           }}
         >
-          Search Results
+          MRI
         </h2>
+        <p style={{ textAlign: "center", padding: "0px 30px" }}>
+          Our MRI is a brand new 24 channel MRI System. Why do we talk about
+          Elements & channels? Elements are what acquire the information.
+          Channels are like high ways on which information runs. Computers
+          compute the information and give you images. We have one of the
+          highest element density and number of channels for any region of
+          interest to give you unpar- alleled image quality.{" "}
+        </p>
         <div style={{ backgroundColor: "#f3f2f2", padding: "40px" }}>
           <div class="row">
             <SearchResultItem />
@@ -71,8 +90,8 @@ const SearchResult = () => {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 
-export default SearchResult;
+export default TestCategory;
