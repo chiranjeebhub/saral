@@ -1,7 +1,6 @@
 import React from "react";
 import Nav from "../components/Nav";
 import Background from "../img/contact_us_bg.jpg";
-import pro from "../img/placeholder.jpg";
 import Footer from "../components/Footer";
 
 const Contact = () => {

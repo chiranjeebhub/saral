@@ -12,6 +12,9 @@ import Gallery from "./pages/Gallery";
 import Experts from "./pages/Experts";
 import TestCategory from "./pages/TestCategory";
 import Contact from "./pages/Contact";
+import Faq from "./pages/Faq";
+import Cart from "./pages/Cart";
+import Download from "./pages/Download";
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
         <Route path="/experts" component={Experts} />
         <Route path="/gallery" component={Gallery} />
         <Route path="/contact" component={Contact} />
+        <Route path="/faq" component={Faq} />
+        <Route path="/cart" component={Cart} />
+        <Route path="/download" component={Download} />
         <Route path="/category" component={TestCategory} />
         <Route path="/single" component={SinglePackage} />
       </Switch>
