@@ -51,7 +51,6 @@ const Home = () => {
         </div>
         <CollectionCard />
         <SearchSection />
-
         <HealthRisk />
         <Accr />
         <Footer />

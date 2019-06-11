@@ -51,8 +51,9 @@ const HealthRisk = () => {
               disease.
             </p>
             <br />
+
             <p>
-              <Link to="/category">View Test >></Link>
+              <Link to="/risk/Heart/72">View Test >></Link>
             </p>
           </div>
 
@@ -77,7 +78,7 @@ const HealthRisk = () => {
             </p>
             <br />
             <p>
-              <Link to="/category">View Test >></Link>
+              <Link to="/risk/Kidney/82">View Test >></Link>
             </p>
           </div>
           <div className="risk-card">
@@ -101,7 +102,7 @@ const HealthRisk = () => {
             </p>
             <br />
             <p>
-              <Link to="/category">View Test >></Link>
+              <Link to="/risk/Liver/73">View Test >></Link>
             </p>
           </div>
           <div className="risk-card">

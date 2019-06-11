@@ -13,7 +13,7 @@ const SearchSection = () => {
     }
   };
 
-  const twoPkg = value.pkg.slice(8);
+  const twoPkg = value.pkg.slice(7);
   console.log(twoPkg);
 
   const pkgitem = twoPkg.map((item, index) => {

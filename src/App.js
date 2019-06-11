@@ -16,6 +16,7 @@ import Faq from "./pages/Faq";
 import Cart from "./pages/Cart";
 import Download from "./pages/Download";
 import PackageAll from "./pages/PackageAll";
+import RiskPage from "./pages/RiskPage";
 
 import Axios from "axios";
 
@@ -24,11 +25,13 @@ import { SaralContext } from "./Context";
 function App() {
   const [pkg, setPkg] = useState([]);
   const [totalPage, setTotalPage] = useState("");
-  const [currentPage, setCurrentPage] = useState(1);
+  let [currentPage, setCurrentPage] = useState(1);
+  const [totalItem, setTotalItem] = useState("");
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     fetchAll();
-  }, []);
+  }, [totalPage, currentPage]);
 
   const fetchAll = () => {
     Axios.get(
@@ -36,21 +39,24 @@ function App() {
     ).then(res => {
       setPkg(res.data);
       setTotalPage(res.headers["x-wp-totalpages"]);
-      console.log(res);
+      setTotalItem(res.headers["x-wp-total"]);
+      console.log(totalPage);
     });
   };
 
+  // const ninePerSlot = () => {};
+
   const nextPage = () => {
-    if (currentPage <= totalPage) {
-      setCurrentPage(currentPage + 1);
+    if (currentPage < totalPage) {
+      setCurrentPage((currentPage = currentPage + 1));
       console.log(currentPage);
       fetchAll();
     }
   };
 
   const prevPage = () => {
-    if (currentPage !== 1) {
-      setCurrentPage(currentPage - 1);
+    if (currentPage > 1) {
+      setCurrentPage((currentPage = currentPage - 1));
       console.log(currentPage);
     }
     // if (this.state.movieList && this.state.currentpage !== 1) {
@@ -69,7 +75,10 @@ function App() {
     setPkg,
     totalPage,
     nextPage,
-    prevPage
+    prevPage,
+    currentPage,
+    query,
+    setQuery
   };
 
   return (
@@ -90,6 +99,7 @@ function App() {
           <Route path="/cart" component={Cart} />
           <Route path="/download" component={Download} />
           <Route path="/category" component={TestCategory} />
+          <Route path="/risk/:risk_id" component={RiskPage} />
           <Route path="/single" component={SinglePackage} />
         </Switch>
       </BrowserRouter>

@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "../components/Nav";
 import SearchResultItem from "../components/SearchResultItem";
 import Footer from "../components/Footer";
+import Axios from "axios";
+import { withRouter } from "react-router-dom";
 
-const TestCategory = () => {
+const TestCategory = props => {
+  const urlPath = props.location.pathname;
+  const catName = urlPath.substr(urlPath.lastIndexOf("/") + 1);
+  const [catItem, setCatItem] = useState([]);
+  console.log(catName);
+
+  useEffect(() => {
+    Axios.get(
+      `https://saraldiagnostics.com/wp-json/wc/v3/products?tag=${catName}&per_page=9&consumer_key=ck_d35c2b894ba90c814eafd4902cf3a516886b531d&consumer_secret=cs_b93d54fe59bcc48228e5ee7257d2e2dbfb144f39`
+    ).then(res => {
+      setCatItem(res.data);
+    });
+  }, []);
+
+  const allpkg = catItem.map((item, index) => {
+    return <SearchResultItem name={item.name} price={item.price} />;
+  });
+
   return (
     <div>
       <div style={{ backgroundColor: "#33c9da" }}>
@@ -81,20 +100,35 @@ const TestCategory = () => {
         <div
           style={{
             backgroundColor: "#f3f2f2",
-            padding: "40px",
+            padding: "10px 0px",
             marginBottom: "20px"
           }}
         >
-          <div class="row">
-            <SearchResultItem />
-            <SearchResultItem />
-            <SearchResultItem />
+          <div class="row justify-content-center">{allpkg}</div>
+          {/* <div class="row justify-content-center">
+            <button
+              className={
+                value.currentPage <= 1
+                  ? "btn btn-outline-light disabled"
+                  : "btn btn-outline-primary"
+              }
+              onClick={value.prevPage}
+            >
+              Previous Page
+            </button>
+            &nbsp;&nbsp;
+            <button
+              className={
+                value.currentPage === value.totalPage
+                  ? "btn btn-outline-light disabled"
+                  : "btn btn-outline-primary"
+              }
+              onClick={value.nextPage}
+            >
+              Next Page
+            </button>
           </div>
-          <div class="row">
-            <SearchResultItem />
-            <SearchResultItem />
-            <SearchResultItem />
-          </div>
+         */}
         </div>
       </div>
       <Footer />
@@ -102,4 +136,4 @@ const TestCategory = () => {
   );
 };
 
-export default TestCategory;
+export default withRouter(TestCategory);
