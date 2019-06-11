@@ -19,7 +19,10 @@ const SearchSection = () => {
   const pkgitem = twoPkg.map((item, index) => {
     return (
       <div className="pkg" key={index}>
-        <Link to="/single" style={{ textDecoration: "none", color: "inherit" }}>
+        <Link
+          to={`/${item.id}`}
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
           <span className="pkg-title">{item.name}</span>
           <br />
           <span>

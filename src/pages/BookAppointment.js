@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 
 const BookAppointment = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <div>
       <div style={{ backgroundColor: "#33c9da" }}>
@@ -57,7 +60,7 @@ const BookAppointment = () => {
               </div>
               <div class="form-group input-group-lg col-md-6">
                 <input
-                  type="number"
+                  type="tel"
                   class="form-control"
                   id="number"
                   placeholder="Enter Phone Number"

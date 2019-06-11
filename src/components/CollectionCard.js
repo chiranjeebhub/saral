@@ -25,6 +25,7 @@ const CollectionCard = () => {
                 />
                 {/* <i class="far fa-hourglass" /> */}
                 <br />
+
                 <span>Online Access to Reports</span>
               </div>
               <div

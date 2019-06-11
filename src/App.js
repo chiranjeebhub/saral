@@ -17,6 +17,7 @@ import Cart from "./pages/Cart";
 import Download from "./pages/Download";
 import PackageAll from "./pages/PackageAll";
 import RiskPage from "./pages/RiskPage";
+import ScrolltoTop from "./components/ScrolltoTop";
 
 import Axios from "axios";
 
@@ -100,7 +101,7 @@ function App() {
           <Route path="/download" component={Download} />
           <Route path="/category" component={TestCategory} />
           <Route path="/risk/:risk_id" component={RiskPage} />
-          <Route path="/single" component={SinglePackage} />
+          <Route path="/:id" component={SinglePackage} />
         </Switch>
       </BrowserRouter>
     </SaralContext.Provider>

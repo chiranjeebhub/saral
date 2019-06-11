@@ -43,7 +43,12 @@ const HealthRisk = () => {
             <p
               style={{ fontSize: "21px", fontWeight: "bold", color: "#33c9da" }}
             >
-              Heart
+              <Link
+                to="/risk/Heart/72"
+                style={{ textDecoration: "none", color: "#33c9da" }}
+              >
+                Heart
+              </Link>
             </p>
             <p style={{ fontSize: "12px" }}>
               Heart is the most important organ of the body and keeping it
@@ -53,7 +58,12 @@ const HealthRisk = () => {
             <br />
 
             <p>
-              <Link to="/risk/Heart/72">View Test >></Link>
+              <Link
+                to="/risk/Heart/72"
+                style={{ textDecoration: "none", color: "#33c9da" }}
+              >
+                View Test >>
+              </Link>
             </p>
           </div>
 
@@ -69,7 +79,12 @@ const HealthRisk = () => {
             <p
               style={{ fontSize: "21px", fontWeight: "bold", color: "#33c9da" }}
             >
-              Kidney
+              <Link
+                to="/risk/Kidney/82"
+                style={{ textDecoration: "none", color: "#33c9da" }}
+              >
+                Kidney
+              </Link>
             </p>
             <p style={{ fontSize: "12px" }}>
               Heart is the most important organ of the body and keeping it
@@ -78,7 +93,12 @@ const HealthRisk = () => {
             </p>
             <br />
             <p>
-              <Link to="/risk/Kidney/82">View Test >></Link>
+              <Link
+                to="/risk/Kidney/82"
+                style={{ textDecoration: "none", color: "#33c9da" }}
+              >
+                View Test >>
+              </Link>
             </p>
           </div>
           <div className="risk-card">
@@ -90,10 +110,13 @@ const HealthRisk = () => {
             />
             <br />
             <br />
-            <p
-              style={{ fontSize: "21px", fontWeight: "bold", color: "#33c9da" }}
-            >
-              Liver
+            <p style={{ fontSize: "21px", fontWeight: "bold" }}>
+              <Link
+                to="/risk/Liver/73"
+                style={{ textDecoration: "none", color: "#33c9da" }}
+              >
+                Liver
+              </Link>
             </p>
             <p style={{ fontSize: "12px" }}>
               Heart is the most important organ of the body and keeping it
@@ -102,7 +125,12 @@ const HealthRisk = () => {
             </p>
             <br />
             <p>
-              <Link to="/risk/Liver/73">View Test >></Link>
+              <Link
+                to="/risk/Liver/73"
+                style={{ textDecoration: "none", color: "#33c9da" }}
+              >
+                View Test >>
+              </Link>
             </p>
           </div>
           <div className="risk-card">
@@ -125,9 +153,7 @@ const HealthRisk = () => {
               disease.
             </p>
             <br />
-            <p>
-              <Link to="/category">View Test >></Link>
-            </p>
+            <p>View Test >></p>
           </div>
         </Slider>
         <h1
