@@ -1,14 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Redirect, Link } from "react-router-dom";
+import { SaralContext } from "../Context";
 
 const SearchSection = () => {
+  const value = useContext(SaralContext);
   const [query, setQuery] = useState("");
+
   const handleSubmit = e => {
     e.preventDefault();
     if (query === "") {
       return <Redirect to="/SearchResult" />;
     }
   };
+
+  const twoPkg = value.pkg.slice(8);
+  console.log(twoPkg);
+
+  const pkgitem = twoPkg.map((item, index) => {
+    return (
+      <div className="pkg" key={index}>
+        <Link to="/single" style={{ textDecoration: "none", color: "inherit" }}>
+          <span className="pkg-title">{item.name}</span>
+          <br />
+          <span>
+            <b>Include 16 lab tests</b>
+          </span>
+          <br />
+          Haemogram(Hb, TLC, DLC, ESR, RBC, PCV, Platelet, PeripheralSmer, MCV,
+          MCH, MCHC, MPV, RDW, ANC, AEC, ALC, AMC – 16 test)
+          <br />
+          <b>Blood Group</b> <br />
+          VDRL, HbSAg, HIV, HPLC <br />
+          <span className="pkg-price">Rs. {item.price}/-</span>
+        </Link>
+      </div>
+    );
+  });
   return (
     <div className="hero-2">
       <div className="container">
@@ -45,6 +72,8 @@ const SearchSection = () => {
                 </div>
               </div>
             </form>
+            {pkgitem}
+            {/*             
             <div className="pkg">
               <Link
                 to="/single"
@@ -64,6 +93,7 @@ const SearchSection = () => {
                 <span className="pkg-price">₹2,000</span>
               </Link>
             </div>
+
             <div className="pkg">
               <span className="pkg-title">PREMARITAL</span>
               <br />
@@ -78,15 +108,18 @@ const SearchSection = () => {
               VDRL, HbSAg, HIV, HPLC <br />
               <span className="pkg-price">₹2,000</span>
             </div>
-            <p
-              style={{
-                paddingLeft: "20px",
-                color: "#33c9da",
-                fontWeight: "bold"
-              }}
-            >
-              View All Packages >>
-            </p>
+             */}
+            <Link to="/packages">
+              <p
+                style={{
+                  paddingLeft: "20px",
+                  color: "#33c9da",
+                  fontWeight: "bold"
+                }}
+              >
+                View All Packages >>
+              </p>
+            </Link>
           </div>
         </div>
       </div>
