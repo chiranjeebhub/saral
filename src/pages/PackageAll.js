@@ -58,11 +58,18 @@ const PackageAll = () => {
         <div
           style={{
             backgroundColor: "#f3f2f2",
-            padding: "40px",
+            padding: "10px 0px",
             marginBottom: "20px"
           }}
         >
-          <div class="row">{allpkg}</div>
+          <div class="row justify-content-center">{allpkg}</div>
+          <button className="btn btn-outline-primary" onClick={value.prevPage}>
+            Previous Page
+          </button>
+          &nbsp;&nbsp;
+          <button className="btn btn-outline-primary" onClick={value.nextPage}>
+            Next Page
+          </button>
           {/* <div class="row">
             <SearchResultItem />
             <SearchResultItem />

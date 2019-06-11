@@ -23,18 +23,53 @@ import { SaralContext } from "./Context";
 
 function App() {
   const [pkg, setPkg] = useState([]);
+  const [totalPage, setTotalPage] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
+    fetchAll();
+  }, []);
+
+  const fetchAll = () => {
     Axios.get(
-      `https://saraldiagnostics.com/wp-json/wc/v1/products?category=35&consumer_key=ck_d35c2b894ba90c814eafd4902cf3a516886b531d&consumer_secret=cs_b93d54fe59bcc48228e5ee7257d2e2dbfb144f39`
+      `https://saraldiagnostics.com/wp-json/wc/v1/products?category=35&page=${currentPage}&per_page=9&consumer_key=ck_d35c2b894ba90c814eafd4902cf3a516886b531d&consumer_secret=cs_b93d54fe59bcc48228e5ee7257d2e2dbfb144f39`
     ).then(res => {
       setPkg(res.data);
+      setTotalPage(res.headers["x-wp-totalpages"]);
+      console.log(res);
     });
-  }, []);
+  };
+
+  const nextPage = () => {
+    if (currentPage <= totalPage) {
+      setCurrentPage(currentPage + 1);
+      console.log(currentPage);
+      fetchAll();
+    }
+  };
+
+  const prevPage = () => {
+    if (currentPage !== 1) {
+      setCurrentPage(currentPage - 1);
+      console.log(currentPage);
+    }
+    // if (this.state.movieList && this.state.currentpage !== 1) {
+    //   this.setState(
+    //     {
+    //       currentpage: (this.state.currentpage -= 1)
+    //     },
+    //     () => console.log(this.state.currentpage)
+    //   );
+    fetchAll();
+    // this.getCurrentMovies();
+  };
 
   const value = {
     pkg,
-    setPkg
+    setPkg,
+    totalPage,
+    nextPage,
+    prevPage
   };
 
   return (

@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchResultItem = ({ name, price }) => {
   return (
-    <div class="col result-box">
+    <div class="col-3 result-box">
       <p className="res-title">{name}</p>
       <p style={{ fontSize: "12px" }}>
         Prior Appointment: Preferable
