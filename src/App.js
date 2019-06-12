@@ -25,23 +25,36 @@ import { SaralContext } from "./Context";
 
 function App() {
   const [pkg, setPkg] = useState([]);
+  const [allProduct, setAllProduct] = useState([]);
   const [totalPage, setTotalPage] = useState("");
   let [currentPage, setCurrentPage] = useState(1);
   const [totalItem, setTotalItem] = useState("");
   const [query, setQuery] = useState("");
+  const [filteredTest, setFilteredTest] = useState([]);
+  const [cart, setCart] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    fetchAll();
+    fetchAllPkg();
+    fetchAllProduct();
   }, [totalPage, currentPage]);
 
-  const fetchAll = () => {
+  const fetchAllPkg = () => {
     Axios.get(
       `https://saraldiagnostics.com/wp-json/wc/v1/products?category=35&page=${currentPage}&per_page=9&consumer_key=ck_d35c2b894ba90c814eafd4902cf3a516886b531d&consumer_secret=cs_b93d54fe59bcc48228e5ee7257d2e2dbfb144f39`
     ).then(res => {
       setPkg(res.data);
       setTotalPage(res.headers["x-wp-totalpages"]);
       setTotalItem(res.headers["x-wp-total"]);
-      console.log(totalPage);
+    });
+  };
+
+  const fetchAllProduct = () => {
+    Axios.get(
+      `https://saraldiagnostics.com/wp-json/wc/v2/products?&consumer_key=ck_d35c2b894ba90c814eafd4902cf3a516886b531d&consumer_secret=cs_b93d54fe59bcc48228e5ee7257d2e2dbfb144f39`
+    ).then(res => {
+      setAllProduct(res.data);
     });
   };
 
@@ -51,7 +64,7 @@ function App() {
     if (currentPage < totalPage) {
       setCurrentPage((currentPage = currentPage + 1));
       console.log(currentPage);
-      fetchAll();
+      fetchAllPkg();
     }
   };
 
@@ -67,8 +80,25 @@ function App() {
     //     },
     //     () => console.log(this.state.currentpage)
     //   );
-    fetchAll();
+    fetchAllPkg();
     // this.getCurrentMovies();
+  };
+
+  const addtoCart = cartItem => {
+    setCart([...cart, cartItem]);
+    setCartCount(cartCount + 1);
+    setTotal(total + parseInt(cartItem.price));
+    console.log(cart);
+    console.log(total);
+  };
+  const removeFromCart = cartItem1 => {
+    const newcart = cart.filter(item => {
+      return item !== cartItem1;
+    });
+    setCart([...newcart]);
+    setCartCount(cartCount - 1);
+    setTotal(total - parseInt(cartItem1.price));
+    //console.log("remove " + cartItem1);
   };
 
   const value = {
@@ -79,7 +109,19 @@ function App() {
     prevPage,
     currentPage,
     query,
-    setQuery
+    setQuery,
+    allProduct,
+    setAllProduct,
+    filteredTest,
+    setFilteredTest,
+    cart,
+    setCart,
+    cartCount,
+    setCartCount,
+    addtoCart,
+    removeFromCart,
+    total,
+    setTotal
   };
 
   return (

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { SaralContext } from "../Context";
 
 const Nav = () => {
+  const value = useContext(SaralContext);
   return (
     <nav class="navbar navbar-expand-lg navbar-light" style={{ zIndex: "9" }}>
       <div className="container">
@@ -103,6 +105,22 @@ const Nav = () => {
                   <li class="nav-item">
                     <Link to="/contact" class="nav-link">
                       Contact Us
+                    </Link>
+                  </li>
+                  <li class="nav-item">
+                    <Link to="/cart" class="nav-link">
+                      <i class="fas fa-shopping-cart" />
+                      <sup>
+                        <span
+                          className={
+                            value.cartCount
+                              ? "badge badge-dark"
+                              : "badge badge-dark disabled"
+                          }
+                        >
+                          {value.cartCount}
+                        </span>
+                      </sup>
                     </Link>
                   </li>
                 </ul>

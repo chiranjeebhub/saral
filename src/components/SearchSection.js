@@ -1,10 +1,30 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Redirect, Link } from "react-router-dom";
 import { SaralContext } from "../Context";
+import SearchSuggest from "./SearchSuggest";
 
 const SearchSection = () => {
   const value = useContext(SaralContext);
   const [query, setQuery] = useState("");
+  console.log(query);
+
+  // let searchValue = query.toLowerCase();
+  // const updatedList = value.allProduct.filter(item => {
+  //   return Object.keys(item).some(
+  //     key => item[key].toString().search(searchValue) !== -1
+  //     value.setFilteredTests
+  //   );
+  // });
+
+  value.filteredTest = value.allProduct.filter(item => {
+    //const query = query.toLowerCase();
+    return item.name.toLowerCase().indexOf(query.toLowerCase()) >= 0;
+    //return food.name.toLowerCase().indexOf(value.query.toLowerCase()) !== -1;
+  });
+
+  value.filteredTest.map((item, i) => {
+    return <SearchSuggest item={item} i={i} />;
+  });
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -13,8 +33,34 @@ const SearchSection = () => {
     }
   };
 
+  const conditionalComponent = () => {
+    if (query != "") {
+      return (
+        <div>
+          <SearchSuggest />
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          {pkgitem}
+          <Link to="/packages">
+            <p
+              style={{
+                paddingLeft: "20px",
+                color: "#33c9da",
+                fontWeight: "bold"
+              }}
+            >
+              View All Packages >>
+            </p>
+          </Link>
+        </div>
+      );
+    }
+  };
+
   const twoPkg = value.pkg.slice(7);
-  console.log(twoPkg);
 
   const pkgitem = twoPkg.map((item, index) => {
     return (
@@ -75,7 +121,7 @@ const SearchSection = () => {
                 </div>
               </div>
             </form>
-            {pkgitem}
+            {conditionalComponent()}
             {/*             
             <div className="pkg">
               <Link
@@ -112,17 +158,6 @@ const SearchSection = () => {
               <span className="pkg-price">₹2,000</span>
             </div>
              */}
-            <Link to="/packages">
-              <p
-                style={{
-                  paddingLeft: "20px",
-                  color: "#33c9da",
-                  fontWeight: "bold"
-                }}
-              >
-                View All Packages >>
-              </p>
-            </Link>
           </div>
         </div>
       </div>

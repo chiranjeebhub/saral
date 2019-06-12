@@ -93,6 +93,16 @@
   font-weight: bold;
 }
 
+.searchSuggest {
+  padding: 0px 5px;
+}
+
+.searchSuggest:hover {
+  background-color: #33c9da;
+  color: white;
+  border-radius: 5px;
+}
+
 .single-title {
   margin-top: 40px;
   border-radius: 5px;
@@ -299,6 +309,22 @@
   background-color: #f9f8f8;
   padding: 30px;
   margin: 30px 0px;
+}
+
+.cart-box {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 9px 0 rgba(21, 21, 21, 0.2);
+          box-shadow: 0 0 9px 0 rgba(21, 21, 21, 0.2);
+  border: solid 1px #ffffff;
+  background-color: #f7f7f7;
+}
+
+hr {
+  clear: both;
+  display: block;
+  width: 96%;
+  background-color: #33c9da;
+  height: 1px;
 }
 
 .hero {

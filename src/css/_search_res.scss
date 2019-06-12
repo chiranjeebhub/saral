@@ -46,3 +46,11 @@
     }
   }
 }
+.searchSuggest {
+  padding: 0px 5px;
+  &:hover {
+    background-color: #33c9da;
+    color: white;
+    border-radius: 5px;
+  }
+}
