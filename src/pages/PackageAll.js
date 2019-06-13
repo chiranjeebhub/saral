@@ -3,12 +3,13 @@ import Nav from "../components/Nav";
 import SearchResultItem from "../components/SearchResultItem";
 import Footer from "../components/Footer";
 import { SaralContext } from "../Context";
+import CallBackModal from "../components/CallBackModal";
 
 const PackageAll = () => {
   const value = useContext(SaralContext);
 
   const allpkg = value.pkg.map((item, index) => {
-    return <SearchResultItem name={item.name} price={item.price} />;
+    return <SearchResultItem name={item.name} price={item.price} item={item} />;
   });
 
   return (
@@ -95,6 +96,7 @@ const PackageAll = () => {
           </div> */}
         </div>
       </div>
+      <CallBackModal />
       <Footer />
     </div>
   );

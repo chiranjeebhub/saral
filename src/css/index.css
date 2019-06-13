@@ -580,4 +580,14 @@ hr {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.9))), url("../img/3rd_page_bg.jpg");
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../img/3rd_page_bg.jpg");
 }
+
+.modal-backdrop {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
 /*# sourceMappingURL=index.css.map */

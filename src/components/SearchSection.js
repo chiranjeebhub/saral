@@ -6,7 +6,6 @@ import SearchSuggest from "./SearchSuggest";
 const SearchSection = () => {
   const value = useContext(SaralContext);
   const [query, setQuery] = useState("");
-  console.log(query);
 
   // let searchValue = query.toLowerCase();
   // const updatedList = value.allProduct.filter(item => {

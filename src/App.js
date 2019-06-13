@@ -34,6 +34,7 @@ function App() {
   const [cart, setCart] = useState([]);
   const [cartCount, setCartCount] = useState(0);
   const [total, setTotal] = useState(0);
+  const [location, setLocation] = useState("");
 
   useEffect(() => {
     fetchAllPkg();
@@ -85,11 +86,18 @@ function App() {
   };
 
   const addtoCart = cartItem => {
-    setCart([...cart, cartItem]);
-    setCartCount(cartCount + 1);
-    setTotal(total + parseInt(cartItem.price));
-    console.log(cart);
-    console.log(total);
+    let filteredCart = cart.filter(food => {
+      return food.name.indexOf(cartItem.name) !== -1;
+    });
+    if (filteredCart == false) {
+      setCart([...cart, cartItem]);
+      setCartCount(cartCount + 1);
+      setTotal(total + parseInt(cartItem.price));
+      console.log(cart);
+      console.log(total);
+    } else {
+      console.log("already exists");
+    }
   };
   const removeFromCart = cartItem1 => {
     const newcart = cart.filter(item => {
@@ -121,7 +129,9 @@ function App() {
     addtoCart,
     removeFromCart,
     total,
-    setTotal
+    setTotal,
+    location,
+    setLocation
   };
 
   return (

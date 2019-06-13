@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import { Link, withRouter } from "react-router-dom";
 import Axios from "axios";
 import { SaralContext } from "../Context";
+import CallBackModal from "../components/CallBackModal";
 
 const SinglePackage = props => {
   const value = useContext(SaralContext);
@@ -80,7 +81,12 @@ const SinglePackage = props => {
                     Book Now
                   </button>
                   &nbsp;&nbsp;&nbsp;
-                  <button type="button" class="btn but-single-call">
+                  <button
+                    type="button"
+                    class="btn but-single-call"
+                    data-toggle="modal"
+                    data-target="#callbackModal"
+                  >
                     Get Call Back
                   </button>
                 </div>
@@ -96,7 +102,12 @@ const SinglePackage = props => {
               Book Now
             </button>
             &nbsp;&nbsp;&nbsp;
-            <button type="button" class="btn but-single-call">
+            <button
+              type="button"
+              class="btn but-single-call"
+              data-toggle="modal"
+              data-target="#callbackModal"
+            >
               Get Call Back
             </button>
           </div>
@@ -177,7 +188,12 @@ const SinglePackage = props => {
               Book Now
             </button>
             &nbsp;&nbsp;&nbsp;
-            <button type="button" class="btn but-single-call">
+            <button
+              type="button"
+              class="btn but-single-call"
+              data-toggle="modal"
+              data-target="#callbackModal"
+            >
               Get Call Back
             </button>
           </div>
@@ -237,6 +253,7 @@ const SinglePackage = props => {
           </div>
         </div>
       </div>
+      <CallBackModal />
       <Footer />
     </div>
   );

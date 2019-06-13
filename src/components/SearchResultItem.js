@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SaralContext } from "../Context";
+import CallBackModal from "./CallBackModal";
 
-const SearchResultItem = ({ name, price }) => {
+const SearchResultItem = ({ name, price, item }) => {
+  const value = useContext(SaralContext);
   return (
     <React.Fragment>
       <div class="col-3 result-box">
@@ -11,9 +14,13 @@ const SearchResultItem = ({ name, price }) => {
         </p>
         <p style={{ fontWeight: "bold" }}>
           <span>Diagnostics Price:</span>
-          <span className="res-title"> {price}</span>
+          <span className="res-title"> Rs. {price}/-</span>
         </p>
-        <button type="button" class="btn but-res-outline">
+        <button
+          type="button"
+          class="btn but-res-outline"
+          onClick={() => value.addtoCart(item)}
+        >
           BOOK NOW
         </button>
         &nbsp;&nbsp;&nbsp;
@@ -26,67 +33,7 @@ const SearchResultItem = ({ name, price }) => {
           GET A CALL
         </button>
       </div>
-
-      {/* <!-- Modal --> */}
-      <div
-        class="modal fade"
-        id="callbackModal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="callbackModal"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
-                Free call back from our Health Advisor
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="form-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    placeholder="Enter your Name"
-                  />
-                </div>
-                <div class="form-group">
-                  <input
-                    type="tel"
-                    class="form-control"
-                    id="Phone Number"
-                    placeholder="Enter your Phone Number"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  class="btn btn-warning btn-block"
-                  style={{ color: "white", fontWeight: "bold" }}
-                >
-                  Submit
-                </button>
-              </form>
-            </div>
-            {/* <div class="modal-footer">
-              <button type="button" class="btn btn-primary btn-block">
-                Save changes
-              </button>
-            </div> */}
-          </div>
-        </div>
-      </div>
+      <CallBackModal />
     </React.Fragment>
   );
 };
