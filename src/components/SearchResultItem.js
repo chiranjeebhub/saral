@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { SaralContext } from "../Context";
 import CallBackModal from "./CallBackModal";
 
 const SearchResultItem = ({ name, price, item }) => {
   const value = useContext(SaralContext);
+  // const [added, setAdded] = useState(Boolean);
   return (
     <React.Fragment>
       <div class="col-3 result-box">
@@ -21,6 +22,7 @@ const SearchResultItem = ({ name, price, item }) => {
           class="btn but-res-outline"
           onClick={() => value.addtoCart(item)}
         >
+          {/* {added ? "Visit Cart" : "BOOK NOW"} */}
           BOOK NOW
         </button>
         &nbsp;&nbsp;&nbsp;

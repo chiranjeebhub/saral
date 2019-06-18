@@ -18,10 +18,15 @@ import Download from "./pages/Download";
 import PackageAll from "./pages/PackageAll";
 import RiskPage from "./pages/RiskPage";
 import ScrolltoTop from "./components/ScrolltoTop";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+
+import firebase from "./firebase";
 
 import Axios from "axios";
 
 import { SaralContext } from "./Context";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   const [pkg, setPkg] = useState([]);
@@ -35,11 +40,20 @@ function App() {
   const [cartCount, setCartCount] = useState(0);
   const [total, setTotal] = useState(0);
   const [location, setLocation] = useState("");
+  const [currentUser, setCurrentUser] = useState(null);
+  const [isloggedin, setIsloggedin] = useState("");
+  const products = [];
 
   useEffect(() => {
     fetchAllPkg();
     fetchAllProduct();
-  }, [totalPage, currentPage]);
+    firebase.auth().onAuthStateChanged(function(user) {
+      setCurrentUser(user);
+    });
+    //app.auth().onAuthStateChanged(setCurrentUser);
+    console.log(currentUser);
+  }, []);
+  // }, [totalPage, currentPage]);
 
   const fetchAllPkg = () => {
     Axios.get(
@@ -52,10 +66,19 @@ function App() {
   };
 
   const fetchAllProduct = () => {
+    // for (let page = 1; page <= totalPage; page += 1) {
+    //   Axios.get(
+    //     `https://saraldiagnostics.com/wp-json/wc/v2/products?&page=${page}&consumer_key=ck_d35c2b894ba90c814eafd4902cf3a516886b531d&consumer_secret=cs_b93d54fe59bcc48228e5ee7257d2e2dbfb144f39`
+    //   ).then(res => {
+    //     setAllProduct(...allProduct, res.data);
+    //   });
+    // }
+    // console.log(allProduct);
+
     Axios.get(
       `https://saraldiagnostics.com/wp-json/wc/v2/products?&consumer_key=ck_d35c2b894ba90c814eafd4902cf3a516886b531d&consumer_secret=cs_b93d54fe59bcc48228e5ee7257d2e2dbfb144f39`
     ).then(res => {
-      setAllProduct(res.data);
+      setAllProduct(...allProduct, res.data);
     });
   };
 
@@ -131,7 +154,10 @@ function App() {
     total,
     setTotal,
     location,
-    setLocation
+    setLocation,
+    currentUser,
+    isloggedin,
+    setIsloggedin
   };
 
   return (
@@ -152,6 +178,9 @@ function App() {
           <Route path="/cart" component={Cart} />
           <Route path="/download" component={Download} />
           <Route path="/category" component={TestCategory} />
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/dashboard" component={Dashboard} />
           <Route path="/risk/:risk_id" component={RiskPage} />
           <Route path="/:id" component={SinglePackage} />
         </Switch>

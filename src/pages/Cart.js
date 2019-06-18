@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
 import Background from "../img/faq_bg.jpg";
@@ -11,18 +11,33 @@ const Cart = () => {
   const value = useContext(SaralContext);
   const [price, setPrice] = useState([]);
   const [itemCat, setItemCat] = useState([]);
+
+  // useEffect(() => {
+  //   //const found = value.cart.map(item => {item.catagories[0]);
+  //   value.cart.map((item, index) => {
+  //     setItemCat([...itemCat, item.catagories[index].id]);
+  //   });
+
+  //   // if (found[0].id === 32 || found[0].id === 39) {
+  //   //   console.log("Lab Found");
+  //   // } else {
+  //   //   console.log("Lab not Found");
+  //   //   console.log(found[0].id);
+  //   // }
+  // }, []);
+
   const singleItem = value.cart.map(item => {
     return (
       <CartItem name={item.name} id={item.id} price={item.price} item={item} />
     );
   });
-  const loc = () => {
-    if (value.cart.filter(item => item.catagories[0].id === 32)) {
-      console.log("lab exists");
-    } else {
-      console.log("no lab");
-    }
-  };
+  // const loc = () => {
+  //   if (value.cart.filter(item => item.catagories[0].id === 32)) {
+  //     console.log("lab exists");
+  //   } else {
+  //     console.log("no lab");
+  //   }
+  // };
   const handlePaymentGateway = () => {
     if (value.location === "Delhi") {
       value.cart.map(item => {

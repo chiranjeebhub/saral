@@ -1,10 +1,32 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { SaralContext } from "../Context";
 import LocationModal from "./LocationModal";
+import firebase from "firebase";
 
 const Nav = () => {
   const value = useContext(SaralContext);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    logged(token);
+  });
+
+  const logged = token => {
+    if (token === "") {
+      return (
+        <Link to="/login" class="nav-link">
+          Login/Sign Up
+        </Link>
+      );
+    } else {
+      return (
+        <Link to="/dashboard" class="nav-link">
+          Dashboard
+        </Link>
+      );
+    }
+  };
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-light" style={{ zIndex: "9" }}>
@@ -57,9 +79,25 @@ const Nav = () => {
                 >
                   <ul class="navbar-nav" style={{ justifyContent: "right" }}>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">
-                        Login/Sign Up
-                      </a>
+                      {/* {value.isloggedin ? (
+                        <Link to="/dashboard" class="nav-link">
+                          Dashbaord
+                        </Link>
+                      ) : (
+                        <Link to="/login" class="nav-link">
+                          Login/Sign Up
+                        </Link>
+                      )} */}
+
+                      {localStorage.getItem("token") ? (
+                        <Link to="/dashboard" class="nav-link">
+                          Dashboard
+                        </Link>
+                      ) : (
+                        <Link to="/login" class="nav-link">
+                          Login/Sign Up
+                        </Link>
+                      )}
                     </li>
                     <li class="nav-item">
                       {/* <a
@@ -79,8 +117,20 @@ const Nav = () => {
                       </button>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">
-                        999-888-000-5
+                      <a class="nav-link" href="tel:08952009272">
+                        <i class="fas fa-phone-volume" /> +91-8952009272
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://wa.me/919871994993">
+                        <i class="fab fa-whatsapp" />
+                        &nbsp;Whatsapp Delhi
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://wa.me/919580007000">
+                        <i class="fab fa-whatsapp" />
+                        &nbsp;Whatsapp Noida
                       </a>
                     </li>
                   </ul>

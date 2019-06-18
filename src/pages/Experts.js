@@ -13,7 +13,7 @@ const Experts = () => {
       <div
         style={{
           backgroundImage: `url(${Background})`,
-          height: "90vh"
+          height: "80vh"
         }}
       >
         <div className="container">
