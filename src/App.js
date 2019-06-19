@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 import "./css/index.css";
+
 import Home from "./pages/Home";
 import SearchResult from "./pages/SearchResult";
 import BookAppointment from "./pages/BookAppointment";
@@ -22,8 +23,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
 import firebase from "./firebase";
-
 import Axios from "axios";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 
 import { SaralContext } from "./Context";
 import Dashboard from "./pages/Dashboard";
@@ -42,7 +43,6 @@ function App() {
   const [location, setLocation] = useState("");
   const [currentUser, setCurrentUser] = useState(null);
   const [isloggedin, setIsloggedin] = useState("");
-  const products = [];
 
   useEffect(() => {
     fetchAllPkg();
@@ -62,6 +62,7 @@ function App() {
       setPkg(res.data);
       setTotalPage(res.headers["x-wp-totalpages"]);
       setTotalItem(res.headers["x-wp-total"]);
+      console.log(totalPage);
     });
   };
 
@@ -74,14 +75,19 @@ function App() {
     //   });
     // }
     // console.log(allProduct);
-
-    Axios.get(
-      `https://saraldiagnostics.com/wp-json/wc/v2/products?&consumer_key=ck_d35c2b894ba90c814eafd4902cf3a516886b531d&consumer_secret=cs_b93d54fe59bcc48228e5ee7257d2e2dbfb144f39`
-    ).then(res => {
-      setAllProduct(...allProduct, res.data);
-    });
+    let Product = [];
+    for (let page = 1; page <= 107; page++) {
+      Axios.get(
+        `https://saraldiagnostics.com/wp-json/wc/v2/products?page=${page}&consumer_key=ck_d35c2b894ba90c814eafd4902cf3a516886b531d&consumer_secret=cs_b93d54fe59bcc48228e5ee7257d2e2dbfb144f39`
+      ).then(res => {
+        //setAllProduct([...allProduct, ...res.data]);
+        // Product = [...Product, ...res.data];
+        Product.push.apply(Product, res.data);
+      });
+    }
+    setAllProduct(Product);
+    // console.log(Product);
   };
-
   // const ninePerSlot = () => {};
 
   const nextPage = () => {
@@ -185,6 +191,19 @@ function App() {
           <Route path="/:id" component={SinglePackage} />
         </Switch>
       </BrowserRouter>
+      {/* <MessengerCustomerChat
+        pageId="147194405781651"
+        appId="226885974036684"
+        htmlRef="<REF_STRING>"
+      /> */}
+      <div
+        class="fb-customerchat"
+        page_id="226885974036684"
+        theme_color="#459645"
+        logged_in_greeting="Hi! How can we help you?"
+        logged_out_greeting="GoodBye!... Hope to see you soon."
+        minimized="false"
+      />
     </SaralContext.Provider>
   );
 }

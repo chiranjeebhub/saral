@@ -47,3 +47,8 @@
 //                             padding: "3px 8px",
 //                             borderRadius: "90px"
 // }
+@media only screen and (max-width: 600px) {
+  .navbar-light .navbar-nav .nav-link {
+    color: black;
+  }
+}

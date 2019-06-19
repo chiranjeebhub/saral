@@ -14,7 +14,7 @@ const SearchSection = () => {
   //     value.setFilteredTests
   //   );
   // });
-
+  //console.log(value.allProduct);
   value.filteredTest = value.allProduct.filter(item => {
     //const query = query.toLowerCase();
     return item.name.toLowerCase().indexOf(query.toLowerCase()) >= 0;

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const SearchSuggest = () => {
   const value = useContext(SaralContext);
-  const filter = value.filteredTest.map(item => {
+  const filter = value.filteredTest.slice(0, 10).map(item => {
     return (
       <div className="col-sm-8" style={{ marginTop: "10px" }}>
         <div className="searchSuggest">

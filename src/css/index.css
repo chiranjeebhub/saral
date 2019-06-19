@@ -34,6 +34,12 @@
   padding-right: 10px;
 }
 
+@media only screen and (max-width: 600px) {
+  .navbar-light .navbar-nav .nav-link {
+    color: black;
+  }
+}
+
 .searchbar {
   height: 37px;
   border-radius: 5px;
