@@ -42,25 +42,36 @@ const AccrMobile = () => {
         }}
       >
         <img
-          src={require("../img/NABL_Delhi.jpg")}
+          src={require("../img/NABH_Noida.png")}
           height="70"
           width="70"
           alt=""
         />
         &nbsp;&nbsp;&nbsp;
         <img
-          src={require("../img/NABL_Delhi.jpg")}
+          src={require("../img/NABL_Delhi.png")}
+          height="70"
+          width="70"
+          alt=""
+        />
+        &nbsp;&nbsp;&nbsp;
+        <img src={require("../img/iso.png")} height="70" width="70" alt="" />
+        &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;
+        <img
+          src={require("../img/NABH_Noida.png")}
           height="70"
           width="70"
           alt=""
         />
         &nbsp;&nbsp;&nbsp;
         <img
-          src={require("../img/NABL_Delhi.jpg")}
+          src={require("../img/NABL_Delhi.png")}
           height="70"
           width="70"
           alt=""
         />
+        &nbsp;&nbsp;&nbsp;
+        <img src={require("../img/iso.png")} height="70" width="70" alt="" />
       </div>
     </div>
   );

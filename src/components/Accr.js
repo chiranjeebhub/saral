@@ -27,23 +27,49 @@ const Accrediation = () => {
               machines.
             </p>
             <br />
-            <p style={{ fontSize: "25px", fontWeight: "bold" }}>
+            <p
+              style={{
+                fontSize: "25px",
+                fontWeight: "bold",
+                textAlign: "center",
+                marginLeft: "-15px"
+              }}
+            >
               Our Accreditation
             </p>
             <img
-              src={require("../img/NABL_Delhi.jpg")}
+              src={require("../img/NABL_Delhi.png")}
               height="70"
               width="70"
               alt=""
             />
             <img
-              src={require("../img/NABL_Delhi.jpg")}
+              src={require("../img/NABH_Noida.png")}
               height="70"
               width="70"
               alt=""
             />
             <img
-              src={require("../img/NABL_Delhi.jpg")}
+              src={require("../img/iso.png")}
+              height="70"
+              width="70"
+              alt=""
+            />{" "}
+            |{" "}
+            <img
+              src={require("../img/iso.png")}
+              height="70"
+              width="70"
+              alt=""
+            />
+            <img
+              src={require("../img/NABH_Noida.png")}
+              height="70"
+              width="70"
+              alt=""
+            />
+            <img
+              src={require("../img/NABL_Delhi.png")}
               height="70"
               width="70"
               alt=""

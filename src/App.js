@@ -41,17 +41,17 @@ function App() {
   const [cartCount, setCartCount] = useState(0);
   const [total, setTotal] = useState(0);
   const [location, setLocation] = useState("");
-  const [currentUser, setCurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState("");
   const [isloggedin, setIsloggedin] = useState("");
 
   useEffect(() => {
     fetchAllPkg();
     fetchAllProduct();
-    firebase.auth().onAuthStateChanged(function(user) {
-      setCurrentUser(user);
+    firebase.auth().onAuthStateChanged(user => {
+      setCurrentUser(user.uid);
     });
-    //app.auth().onAuthStateChanged(setCurrentUser);
     console.log(currentUser);
+    //app.auth().onAuthStateChanged(setCurrentUser);
   }, []);
   // }, [totalPage, currentPage]);
 

@@ -110,7 +110,7 @@ const SingleTest = props => {
         <h1
           style={{ color: "#33c9da", textAlign: "center", margin: "30px 0px" }}
         >
-          SIMILLAR PACKAGES
+          SIMILAR PACKAGES
         </h1>
         <div className="similar-box" style={{ textAlign: "center" }}>
           <div class="row justify-content-center">

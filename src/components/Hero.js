@@ -4,15 +4,15 @@ import Slider from "react-slick";
 const Hero = () => {
   const settings = {
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    centerPadding: 30,
     dots: false,
-    arrows: false
+    arrows: false,
+    autoplay: true
   };
   return (
-    <div>
+    <div style={{ padding: "0px 40px" }}>
       <Slider {...settings}>
         <div className="container">
           <div className="row">
@@ -36,16 +36,17 @@ const Hero = () => {
               className="col"
               style={{
                 display: "flex",
-                alignItems: "end",
-                justifyContent: "center"
+                alignItems: "center",
+                justifyContent: "center",
+                paddingTop: "10vh"
               }}
             >
-              {/* <img
-                src={require("../img/1.png")}
-                height="105%"
-                width="105%"
+              <img
+                src={require("../img/banner1.png")}
+                height="100%"
+                width="100%"
                 alt=""
-              /> */}
+              />
             </div>
           </div>
         </div>
@@ -73,15 +74,16 @@ const Hero = () => {
               style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center"
+                justifyContent: "center",
+                paddingTop: "10vh"
               }}
             >
-              {/* <img
-                src={require("../img/2.png")}
-                height="105%"
-                width="105%"
+              <img
+                src={require("../img/banner2.png")}
+                height="100%"
+                width="100%"
                 alt=""
-              /> */}
+              />
             </div>
           </div>
         </div>
@@ -109,15 +111,16 @@ const Hero = () => {
               style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center"
+                justifyContent: "center",
+                paddingTop: "10vh"
               }}
             >
-              {/* <img
-                src={require("../img/3.png")}
-                height="105%"
-                width="105%"
+              <img
+                src={require("../img/banner3.png")}
+                height="90%"
+                width="90%"
                 alt=""
-              /> */}
+              />
             </div>
           </div>
         </div>

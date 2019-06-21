@@ -28,134 +28,55 @@ const HealthRisk = () => {
           className="Health-Risk"
           style={{ marginBottom: "70px", paddingTop: "30px" }}
         >
-          Health Risk
+          Facilities Available
         </h1>
-        <Slider {...settings}>
-          <div className="risk-card">
-            <img
-              src={require("../img/heart.jpg")}
-              height="57"
-              width="100"
-              alt=""
-            />
-            <br />
-            <br />
-            <p
-              style={{ fontSize: "21px", fontWeight: "bold", color: "#33c9da" }}
-            >
-              <Link
-                to="/risk/Heart/72"
-                style={{ textDecoration: "none", color: "#33c9da" }}
-              >
-                Heart
-              </Link>
-            </p>
-            <p style={{ fontSize: "12px" }}>
-              Heart is the most important organ of the body and keeping it
-              healthy is essential. With heart checkup, stay away from any heart
-              disease.
-            </p>
-            <br />
 
-            <p>
-              <Link
-                to="/risk/Heart/72"
-                style={{ textDecoration: "none", color: "#33c9da" }}
-              >
-                View Test >>
-              </Link>
-            </p>
-          </div>
+        <Slider {...settings} style={{ padding: "0px 100px" }}>
+          <div class="card" style="width: 10rem;">
+            <img
+              src={require("../img/facility1.jpg")}
+              class="card-img-top"
+              alt=""
+            />
 
-          <div className="risk-card">
-            <img
-              src={require("../img/kidney.jpg")}
-              height="57"
-              width="84"
-              alt=""
-            />
-            <br />
-            <br />
-            <p
-              style={{ fontSize: "21px", fontWeight: "bold", color: "#33c9da" }}
-            >
-              <Link
-                to="/risk/Kidney/82"
-                style={{ textDecoration: "none", color: "#33c9da" }}
-              >
-                Kidney
-              </Link>
-            </p>
-            <p style={{ fontSize: "12px" }}>
-              Heart is the most important organ of the body and keeping it
-              healthy is essential. With heart checkup, stay away from any heart
-              disease.
-            </p>
-            <br />
-            <p>
-              <Link
-                to="/risk/Kidney/82"
-                style={{ textDecoration: "none", color: "#33c9da" }}
-              >
+            <div class="card-body" style={{ textAlign: "center" }}>
+              <h5 class="card-title">MRI</h5>
+
+              <a href="#" class="">
                 View Test >>
-              </Link>
-            </p>
+              </a>
+            </div>
           </div>
-          <div className="risk-card">
+          <div class="card" style="width: 10rem;">
             <img
-              src={require("../img/liver.jpg")}
-              height="57"
-              width="84"
+              src={require("../img/facility2.jpg")}
+              class="card-img-top"
               alt=""
             />
-            <br />
-            <br />
-            <p style={{ fontSize: "21px", fontWeight: "bold" }}>
-              <Link
-                to="/risk/Liver/73"
-                style={{ textDecoration: "none", color: "#33c9da" }}
-              >
-                Liver
-              </Link>
-            </p>
-            <p style={{ fontSize: "12px" }}>
-              Heart is the most important organ of the body and keeping it
-              healthy is essential. With heart checkup, stay away from any heart
-              disease.
-            </p>
-            <br />
-            <p>
-              <Link
-                to="/risk/Liver/73"
-                style={{ textDecoration: "none", color: "#33c9da" }}
-              >
+            <div class="card-body" style={{ textAlign: "center" }}>
+              <h5 class="card-title">Laboratory</h5>
+
+              <a href="#" class="">
                 View Test >>
-              </Link>
-            </p>
+              </a>
+            </div>
           </div>
-          <div className="risk-card">
+          <div class="card" style="width: 10rem;">
             <img
-              src={require("../img/heart.jpg")}
-              height="57"
-              width="100"
+              src={require("../img/facility3.jpg")}
+              class="card-img-top"
               alt=""
             />
-            <br />
-            <br />
-            <p
-              style={{ fontSize: "21px", fontWeight: "bold", color: "#33c9da" }}
-            >
-              Anaemia
-            </p>
-            <p style={{ fontSize: "12px" }}>
-              Heart is the most important organ of the body and keeping it
-              healthy is essential. With heart checkup, stay away from any heart
-              disease.
-            </p>
-            <br />
-            <p>View Test >></p>
+            <div class="card-body" style={{ textAlign: "center" }}>
+              <h5 class="card-title">DEXA</h5>
+
+              <a href="#" class="">
+                View Test >>
+              </a>
+            </div>
           </div>
         </Slider>
+
         <h1
           className="Health-Risk"
           style={{ marginBottom: "70px", paddingTop: "30px" }}
@@ -245,6 +166,81 @@ const HealthRisk = () => {
             </div>
           </div>
         </div>
+
+        <h1
+          className="Health-Risk"
+          style={{ marginBottom: "70px", paddingTop: "30px" }}
+        >
+          Testimonials
+        </h1>
+        <Slider {...settings}>
+          <div className="risk-card1">
+            <p
+              style={{ fontSize: "21px", fontWeight: "bold", color: "#33c9da" }}
+            >
+              Review 1
+            </p>
+            <p style={{ fontSize: "12px" }}>
+              Heart is the most important organ of the body and keeping it
+              healthy is essential. With heart checkup, stay away from any heart
+              disease.
+            </p>
+          </div>
+
+          {/* 2nd testimonial */}
+
+          <div className="risk-card1">
+            <p
+              style={{ fontSize: "21px", fontWeight: "bold", color: "#33c9da" }}
+            >
+              Review 2
+            </p>
+            <p style={{ fontSize: "12px" }}>
+              Heart is the most important organ of the body and keeping it
+              healthy is essential. With heart checkup, stay away from any heart
+              disease.
+            </p>
+          </div>
+
+          {/* 3rd testimonial */}
+
+          <div className="risk-card1">
+            <p
+              style={{ fontSize: "21px", fontWeight: "bold", color: "#33c9da" }}
+            >
+              Review 3
+            </p>
+            <p style={{ fontSize: "12px" }}>
+              Heart is the most important organ of the body and keeping it
+              healthy is essential. With heart checkup, stay away from any heart
+              disease.
+            </p>
+          </div>
+
+          {/* Write a  Review */}
+
+          <div
+            className="risk-card1"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              alignContent: "center",
+              justifyContent: "center"
+            }}
+          >
+            {/* <p
+              style={{ fontSize: "21px", fontWeight: "bold", color: "#33c9da" }}
+            >
+              Write a Review
+            </p> */}
+            <p style={{ fontSize: "12px" }}>
+              Heart is the most important organ of the body and keeping it
+              healthy is essential. With heart checkup, stay away from any heart
+              disease.
+            </p>
+            <button className="btn btn-info">Post Review</button>
+          </div>
+        </Slider>
       </div>
     </div>
   );
