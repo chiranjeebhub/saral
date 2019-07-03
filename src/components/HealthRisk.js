@@ -75,7 +75,187 @@ const HealthRisk = () => {
               </a>
             </div>
           </div>
+          <div class="card" style="width: 10rem;">
+            <img
+              src={require("../img/facility4.png")}
+              class="card-img-top"
+              alt=""
+            />
+
+            <div class="card-body" style={{ textAlign: "center" }}>
+              <h5 class="card-title">X-Ray</h5>
+
+              <a href="#" class="">
+                View Test >>
+              </a>
+            </div>
+          </div>
+          <div class="card" style="width: 10rem;">
+            <img
+              src={require("../img/facility5.png")}
+              class="card-img-top"
+              alt=""
+            />
+
+            <div class="card-body" style={{ textAlign: "center" }}>
+              <h5 class="card-title">Ultra Sound</h5>
+
+              <a href="#" class="">
+                View Test >>
+              </a>
+            </div>
+          </div>
+          <div class="card" style="width: 10rem;">
+            <img
+              src={require("../img/facility6.png")}
+              class="card-img-top"
+              alt=""
+            />
+
+            <div class="card-body" style={{ textAlign: "center" }}>
+              <h5 class="card-title">Nuclear Medicine</h5>
+
+              <a href="#" class="">
+                View Test >>
+              </a>
+            </div>
+          </div>
+          <div class="card" style="width: 10rem;">
+            <img
+              src={require("../img/facility7.png")}
+              class="card-img-top"
+              alt=""
+            />
+
+            <div class="card-body" style={{ textAlign: "center" }}>
+              <h5 class="card-title">Mammography</h5>
+
+              <a href="#" class="">
+                View Test >>
+              </a>
+            </div>
+          </div>
+          <div class="card" style="width: 10rem;">
+            <img
+              src={require("../img/facility8.png")}
+              class="card-img-top"
+              alt=""
+            />
+
+            <div class="card-body" style={{ textAlign: "center" }}>
+              <h5 class="card-title">ECG</h5>
+
+              <a href="#" class="">
+                View Test >>
+              </a>
+            </div>
+          </div>
+          <div class="card" style="width: 10rem;">
+            <img
+              src={require("../img/facility9.png")}
+              class="card-img-top"
+              alt=""
+            />
+
+            <div class="card-body" style={{ textAlign: "center" }}>
+              <h5 class="card-title">CT Scan</h5>
+
+              <a href="#" class="">
+                View Test >>
+              </a>
+            </div>
+          </div>
         </Slider>
+
+        <h1
+          className="Health-Risk"
+          style={{ marginBottom: "70px", paddingTop: "30px" }}
+        >
+          Health Risk
+        </h1>
+        <div
+          style={{ display: "flex", alignSelf: "center", alignItems: "center" }}
+        >
+          <div className="habit-card">
+            <div className="row" style={{ textAlign: "center" }}>
+              <div className="col-3" style={{ verticalAlign: "middle" }}>
+                <img
+                  src={require("../img/heart.jpg")}
+                  height="40"
+                  width="80"
+                  alt=""
+                />
+              </div>
+              <div className="col-9" style={{ alignSelf: "center" }}>
+                <span style={{ fontSize: "21px" }}>Heart</span>
+              </div>
+            </div>
+          </div>
+          <div className="habit-card">
+            <div className="row" style={{ textAlign: "center" }}>
+              <div className="col-3" style={{ verticalAlign: "middle" }}>
+                <img
+                  src={require("../img/Alcoholism.jpg")}
+                  height="48"
+                  width="48"
+                  alt=""
+                />
+              </div>
+              <div className="col-9" style={{ alignSelf: "center" }}>
+                <span style={{ fontSize: "21px" }}>Junk Food</span>
+              </div>
+            </div>
+          </div>
+          <div className="habit-card">
+            <div className="row" style={{ textAlign: "center" }}>
+              <div className="col-2" style={{ verticalAlign: "middle" }}>
+                <img
+                  src={require("../img/Alcoholism.jpg")}
+                  height="48"
+                  width="48"
+                  alt=""
+                />
+              </div>
+              <div className="col-10" style={{ alignSelf: "center" }}>
+                <span style={{ fontSize: "21px" }}>Obesity</span>
+              </div>
+            </div>
+          </div>
+          <div className="habit-card">
+            <div className="row" style={{ textAlign: "center" }}>
+              <div className="col-2" style={{ verticalAlign: "middle" }}>
+                <img
+                  src={require("../img/Alcoholism.jpg")}
+                  height="48"
+                  width="48"
+                  alt=""
+                />
+              </div>
+              <div className="col-10" style={{ alignSelf: "center" }}>
+                <span style={{ fontSize: "21px", float: "right" }}>
+                  Alcoholism
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="habit-card">
+            <div className="row" style={{ textAlign: "center" }}>
+              <div className="col-2" style={{ verticalAlign: "middle" }}>
+                <img
+                  src={require("../img/Alcoholism.jpg")}
+                  height="48"
+                  width="48"
+                  alt=""
+                />
+              </div>
+              <div className="col-10" style={{ alignSelf: "center" }}>
+                <span style={{ fontSize: "18px", float: "right" }}>
+                  Sleeplessness
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <h1
           className="Health-Risk"
